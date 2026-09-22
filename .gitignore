@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Pipeline runtime artifacts (folders stay tracked via .gitkeep)
+models/*
+!models/.gitkeep
+results/*
+!results/.gitkeep
