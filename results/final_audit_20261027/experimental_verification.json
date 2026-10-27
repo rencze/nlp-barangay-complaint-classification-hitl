@@ -1,0 +1,376 @@
+{
+  "no_model_training_performed": true,
+  "metrics": {
+    "nb": {
+      "validation": {
+        "n": 2399,
+        "accuracy": 0.992080033347228,
+        "macro_precision": 0.9922669922669923,
+        "macro_recall": 0.9920734251147266,
+        "macro_f1": 0.9920771428269665,
+        "weighted_f1": 0.9920788560720947,
+        "errors": 19,
+        "confusion_matrix": [
+          [
+            800,
+            0,
+            0
+          ],
+          [
+            0,
+            800,
+            0
+          ],
+          [
+            0,
+            19,
+            780
+          ]
+        ],
+        "saved_model_predictions_match_record_exports": true,
+        "language_group_checks": {
+          "Bisaya": {
+            "n": 594,
+            "macro_f1": 0.993281889870376,
+            "matches_saved": true
+          },
+          "English": {
+            "n": 596,
+            "macro_f1": 0.9898948657752373,
+            "matches_saved": true
+          },
+          "Filipino": {
+            "n": 616,
+            "macro_f1": 0.9934304207119741,
+            "matches_saved": true
+          },
+          "Mixed": {
+            "n": 593,
+            "macro_f1": 0.9916666145830079,
+            "matches_saved": true
+          }
+        }
+      },
+      "test": {
+        "n": 2388,
+        "accuracy": 0.9916247906197655,
+        "macro_precision": 0.9917796958487464,
+        "macro_recall": 0.9916770703287557,
+        "macro_f1": 0.9916244601538425,
+        "weighted_f1": 0.9916241296879197,
+        "errors": 20,
+        "confusion_matrix": [
+          [
+            796,
+            0,
+            0
+          ],
+          [
+            0,
+            791,
+            0
+          ],
+          [
+            0,
+            20,
+            781
+          ]
+        ],
+        "saved_model_predictions_match_record_exports": true,
+        "language_group_checks": {
+          "Bisaya": {
+            "n": 595,
+            "macro_f1": 0.9898411716171617,
+            "matches_saved": true
+          },
+          "English": {
+            "n": 603,
+            "macro_f1": 0.9917479109346307,
+            "matches_saved": true
+          },
+          "Filipino": {
+            "n": 591,
+            "macro_f1": 0.9915173570415649,
+            "matches_saved": true
+          },
+          "Mixed": {
+            "n": 599,
+            "macro_f1": 0.9933499170812604,
+            "matches_saved": true
+          }
+        }
+      }
+    },
+    "svm": {
+      "validation": {
+        "n": 2399,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "errors": 0,
+        "confusion_matrix": [
+          [
+            800,
+            0,
+            0
+          ],
+          [
+            0,
+            800,
+            0
+          ],
+          [
+            0,
+            0,
+            799
+          ]
+        ],
+        "saved_model_predictions_match_record_exports": true,
+        "language_group_checks": {
+          "Bisaya": {
+            "n": 594,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "English": {
+            "n": 596,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Filipino": {
+            "n": 616,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Mixed": {
+            "n": 593,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          }
+        }
+      },
+      "test": {
+        "n": 2388,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "errors": 0,
+        "confusion_matrix": [
+          [
+            796,
+            0,
+            0
+          ],
+          [
+            0,
+            791,
+            0
+          ],
+          [
+            0,
+            0,
+            801
+          ]
+        ],
+        "saved_model_predictions_match_record_exports": true,
+        "language_group_checks": {
+          "Bisaya": {
+            "n": 595,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "English": {
+            "n": 603,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Filipino": {
+            "n": 591,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Mixed": {
+            "n": 599,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          }
+        }
+      }
+    },
+    "candidate_uncalibrated": {
+      "validation": {
+        "n": 2399,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "errors": 0,
+        "confusion_matrix": [
+          [
+            800,
+            0,
+            0
+          ],
+          [
+            0,
+            800,
+            0
+          ],
+          [
+            0,
+            0,
+            799
+          ]
+        ],
+        "saved_model_predictions_match_record_exports": true,
+        "language_group_checks": {
+          "Bisaya": {
+            "n": 594,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "English": {
+            "n": 596,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Filipino": {
+            "n": 616,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Mixed": {
+            "n": 593,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          }
+        }
+      }
+    },
+    "candidate_calibrated": {
+      "validation": {
+        "n": 2399,
+        "accuracy": 1.0,
+        "macro_precision": 1.0,
+        "macro_recall": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0,
+        "errors": 0,
+        "confusion_matrix": [
+          [
+            800,
+            0,
+            0
+          ],
+          [
+            0,
+            800,
+            0
+          ],
+          [
+            0,
+            0,
+            799
+          ]
+        ],
+        "saved_model_predictions_match_record_exports": true,
+        "language_group_checks": {
+          "Bisaya": {
+            "n": 594,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "English": {
+            "n": 596,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Filipino": {
+            "n": 616,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          },
+          "Mixed": {
+            "n": 593,
+            "macro_f1": 1.0,
+            "matches_saved": true
+          }
+        }
+      }
+    }
+  },
+  "paired_mcnemar": {
+    "validation": {
+      "a": 2380,
+      "b": 0,
+      "c": 19,
+      "d": 0,
+      "exact_p": 3.814697265625e-06,
+      "corrected_chi2": 17.05263157894737
+    },
+    "test": {
+      "a": 2368,
+      "b": 0,
+      "c": 20,
+      "d": 0,
+      "exact_p": 1.9073486328125e-06,
+      "corrected_chi2": 18.05
+    }
+  },
+  "reference_idf_checks": {
+    "svm": {
+      "training_n": 19213,
+      "features": 1666,
+      "idf_matches_training_document_frequencies": true,
+      "word_ngrams": [
+        1,
+        1
+      ],
+      "min_df": 2,
+      "max_df": 0.95,
+      "sublinear_tf": true
+    },
+    "nb": {
+      "training_n": 19213,
+      "features": 10399,
+      "idf_matches_training_document_frequencies": true,
+      "word_ngrams": [
+        1,
+        2
+      ],
+      "min_df": 2,
+      "max_df": 0.95,
+      "sublinear_tf": true
+    }
+  },
+  "original_search_grid": {
+    "tfidf__ngram_range": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "tfidf__min_df": [
+      2,
+      5,
+      10
+    ],
+    "svm__C": [
+      0.1,
+      1.0,
+      10.0
+    ]
+  },
+  "configuration_count": 18,
+  "candidate_evaluation": "development validation only",
+  "scope": "Read-only verification of stored predictions/artifacts and unchanged data; no independent new experiment."
+}

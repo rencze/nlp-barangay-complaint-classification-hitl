@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="569.88pt" height="261.961133pt" viewBox="0 0 569.88 261.961133" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T23:53:26.571443</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 261.961133 
+L 569.88 261.961133 
+L 569.88 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 11.52 90.023267 
+L 224.7876 90.023267 
+L 224.7876 75.568722 
+L 11.52 75.568722 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="118.1538" y="85.394041" transform="rotate(-0 118.1538 85.394041)">Pipeline</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 224.7876 90.023267 
+L 301.3452 90.023267 
+L 301.3452 75.568722 
+L 224.7876 75.568722 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="263.0664" y="85.393651" transform="rotate(-0 263.0664 85.393651)">Macro-F1</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 301.3452 90.023267 
+L 350.5608 90.023267 
+L 350.5608 75.568722 
+L 301.3452 75.568722 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="325.953" y="85.393651" transform="rotate(-0 325.953 85.393651)">Errors</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 350.5608 90.023267 
+L 454.4604 90.023267 
+L 454.4604 75.568722 
+L 350.5608 75.568722 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="402.5106" y="85.394041" transform="rotate(-0 402.5106 85.394041)">Log loss</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 454.4604 90.023267 
+L 558.36 90.023267 
+L 558.36 75.568722 
+L 454.4604 75.568722 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="506.4102" y="85.394041" transform="rotate(-0 506.4102 85.394041)">ECE (10 bins)</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 11.52 104.477813 
+L 224.7876 104.477813 
+L 224.7876 90.023267 
+L 11.52 90.023267 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="118.1538" y="99.848587" transform="rotate(-0 118.1538 99.848587)">Reference word SVM</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 224.7876 104.477813 
+L 301.3452 104.477813 
+L 301.3452 90.023267 
+L 224.7876 90.023267 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="263.0664" y="99.848196" transform="rotate(-0 263.0664 99.848196)">1.000000</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 301.3452 104.477813 
+L 350.5608 104.477813 
+L 350.5608 90.023267 
+L 301.3452 90.023267 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="325.953" y="99.848196" transform="rotate(-0 325.953 99.848196)">0</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 350.5608 104.477813 
+L 454.4604 104.477813 
+L 454.4604 90.023267 
+L 350.5608 90.023267 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="402.5106" y="99.848587" transform="rotate(-0 402.5106 99.848587)">Not calibrated</text>
+    </g>
+    <g id="patch_11">
+     <path d="M 454.4604 104.477813 
+L 558.36 104.477813 
+L 558.36 90.023267 
+L 454.4604 90.023267 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="506.4102" y="99.848587" transform="rotate(-0 506.4102 99.848587)">Not calibrated</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 11.52 118.932358 
+L 224.7876 118.932358 
+L 224.7876 104.477813 
+L 11.52 104.477813 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_11">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="118.1538" y="114.303132" transform="rotate(-0 118.1538 114.303132)">Word + character SVM</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 224.7876 118.932358 
+L 301.3452 118.932358 
+L 301.3452 104.477813 
+L 224.7876 104.477813 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="263.0664" y="114.302741" transform="rotate(-0 263.0664 114.302741)">1.000000</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 301.3452 118.932358 
+L 350.5608 118.932358 
+L 350.5608 104.477813 
+L 301.3452 104.477813 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="325.953" y="114.302741" transform="rotate(-0 325.953 114.302741)">0</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 350.5608 118.932358 
+L 454.4604 118.932358 
+L 454.4604 104.477813 
+L 350.5608 104.477813 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="402.5106" y="114.303132" transform="rotate(-0 402.5106 114.303132)">Not calibrated</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 454.4604 118.932358 
+L 558.36 118.932358 
+L 558.36 104.477813 
+L 454.4604 104.477813 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="506.4102" y="114.303132" transform="rotate(-0 506.4102 114.303132)">Not calibrated</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 11.52 133.386903 
+L 224.7876 133.386903 
+L 224.7876 118.932358 
+L 11.52 118.932358 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="118.1538" y="128.757678" transform="rotate(-0 118.1538 128.757678)">Calibrated word + character</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 224.7876 133.386903 
+L 301.3452 133.386903 
+L 301.3452 118.932358 
+L 224.7876 118.932358 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="263.0664" y="128.757287" transform="rotate(-0 263.0664 128.757287)">1.000000</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 301.3452 133.386903 
+L 350.5608 133.386903 
+L 350.5608 118.932358 
+L 301.3452 118.932358 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="325.953" y="128.757287" transform="rotate(-0 325.953 128.757287)">0</text>
+    </g>
+    <g id="patch_20">
+     <path d="M 350.5608 133.386903 
+L 454.4604 133.386903 
+L 454.4604 118.932358 
+L 350.5608 118.932358 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="402.5106" y="128.757287" transform="rotate(-0 402.5106 128.757287)">0.00079512</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 454.4604 133.386903 
+L 558.36 133.386903 
+L 558.36 118.932358 
+L 454.4604 118.932358 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 10px; font-family: 'DejaVu Serif'; text-anchor: middle" x="506.4102" y="128.757287" transform="rotate(-0 506.4102 128.757287)">0.00079433</text>
+    </g>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 14px; font-family: 'DejaVu Serif'; text-anchor: middle" x="284.94" y="22.157813" transform="rotate(-0 284.94 22.157813)">Separate development candidate experiment (N = 2,399)</text>
+   </g>
+  </g>
+  <g id="text_22">
+   <text style="font-size: 10px; font-family: 'DejaVu Serif'" transform="translate(85.212969 223.032344)">One fixed candidate; sigmoid calibration uses three grouped training folds.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Serif'" transform="translate(34.102031 235.035078)">All classification scores tie; probability diagnostics are confined to synthetic development data.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Serif'" transform="translate(100.853594 247.037813)">Candidate models were not evaluated on the historical test partition.</text>
+  </g>
+ </g>
+</svg>

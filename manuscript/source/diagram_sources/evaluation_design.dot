@@ -1,0 +1,11 @@
+digraph G {graph[rankdir=TB,bgcolor="white",nodesep=.28,ranksep=.35,pad=.2,fontname="Helvetica",fontsize=16,label="LEAKAGE-AWARE MODEL EVALUATION",labelloc=t];node[shape=box,style="rounded,filled",fillcolor="#EFF4FA",color="#4B6575",fontname="Helvetica",fontsize=10.5,margin=".12,.09"];edge[color="#52718A",arrowsize=.65];
+ corpus[label="24,000 controlled synthetic narratives\n+ scenario families + explicit three-class labels"];
+ freeze[label="Freeze partitions by scenario family\nExclude IDs/categories/metadata from model input"];
+ train[label="Training partition | n = 19,213\nFit TF-IDF only on training folds\nGrid search 18 SVM configurations\n3-fold StratifiedGroupKFold"];
+ valid[label="Validation partition | n = 2,399\nModel selection / learning diagnostics\nDo not claim unbiased test performance"];
+ test[label="Frozen synthetic test | n = 2,388\nOnce after final configuration\nMacro-F1, confusion matrix, subgroup outcomes"];
+ challenge[label="Separately authored challenge | n = 96\nQuestions, short reports, unusual writing\nProbe distribution shift; limited sample"];
+ compare[label="Compare errors + class shortcuts\nLength-only and lexical-artifact checks\nReport uncertainty / failure modes"];
+ hold[label="Future independent review gate\nHuman-labeled cases, urgent safety tests\nDo not recycle held-out items into tuning",fillcolor="#FFF2DD",color="#B08436"];
+ corpus->freeze->train->valid->test->challenge->compare->hold;
+}

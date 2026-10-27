@@ -1,0 +1,50 @@
+digraph Integration {
+  graph [rankdir=TB, bgcolor="white", pad="0.24", nodesep="0.34", ranksep="0.54", splines=polyline,
+         fontname="Liberation Serif", fontsize=15, newrank=true, outputorder=edgesfirst];
+  node [shape=box, style="solid", color="black", penwidth=1.25, fontname="Liberation Serif", fontsize=12,
+        margin="0.15,0.11"];
+  edge [color="black", penwidth=1.17, arrowsize=.72, fontname="Liberation Serif", fontsize=10];
+
+  resident [label="Resident\nAuthenticated account and complaint tracking"];
+  administrator [label="Barangay Administrator\nAuthorized review and case actions"];
+  {rank=same; resident; administrator;}
+
+  portal [label="Resident Portal (Next.js / TypeScript)\nSubject and complaint narrative; optional date/time\nand Purok/Sitio or landmark; case status"];
+  dashboard [label="Staff Dashboard (Next.js / TypeScript)\nHITL review; case progress; supervised updates\nand approved retraining control"];
+  {rank=same; portal; dashboard;}
+
+  api [label="Application API (FastAPI / Python)\nAuthentication / authorization; input validation; routing; audit logging"];
+  ml [label="Text Classification Service (Proposed Deployment)\nPrivacy-aware NLP → Fitted Word + Character TF-IDF\n→ Versioned Calibrated Linear SVM"];
+  routing [shape=diamond, width=2.2, height=1.05, label="Predicted\nValid?", margin="0.08"];
+  review [label="Human-in-the-Loop Review\nSuspicious / Spam only\nVerify text label; Accept / Clarify / Reject"];
+  accepted [label="Accepted-Case Service\nCreate tracking record; assign officer\nUnresolved → Ongoing → Resolved\nEscalation, evidence and reconsideration"];
+  closed [label="Review Disposition Record\nPending clarification or documented rejection\nNot an active case"];
+
+  case_db [label="Complaint and Case Database (PostgreSQL)\nNarrative versions, original predictions, disposition,\ncase state, deadlines and immutable audit events"];
+  feedback [label="Human-Verified Label Records\nNarrative version and verified text label\nStored separately from case outcome"];
+
+  offline [label="Offline Quality-Controlled Retraining\nCheck eligibility / duplicates / class coverage;\nconsolidate existing training data + verified feedback;\ntrain and recalibrate candidate; validate performance"];
+  approval [shape=diamond, width=2.25, height=1.03, label="Deployment\napproved?", margin="0.06"];
+  registry [label="Versioned Model Registry\nNLP configuration + TF-IDF + SVM + calibrator\nExisting model retained when validation fails"];
+
+  resident -> portal;
+  administrator -> dashboard;
+  portal -> api;
+  dashboard -> api;
+  api -> ml;
+  ml -> routing;
+  routing -> accepted [label="Yes: Valid"];
+  routing -> review [label="No: Suspicious / Spam"];
+  review -> accepted [label="Accepted"];
+  review -> closed [label="Clarify / Reject"];
+
+  accepted -> case_db;
+  closed -> case_db;
+  review -> feedback;
+  case_db -> portal [style=dashed, label="status / receipt", constraint=false];
+
+  feedback -> offline [style=dashed, label="eligible reviewed labels"];
+  offline -> approval;
+  approval -> registry [label="Yes"];
+  registry -> ml [style=dashed, constraint=false, label="approved release"];
+}

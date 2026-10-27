@@ -1,0 +1,12 @@
+digraph G {graph[rankdir=TB,bgcolor="white",nodesep=.27,ranksep=.36,pad=.2,fontname="Helvetica",fontsize=16,label="LIVE COMPLAINT TRIAGE, REVIEW & CONTROLLED FEEDBACK",labelloc=t];node[shape=box,style="rounded,filled",fillcolor="#EFF4FA",color="#4B6575",fontname="Helvetica",fontsize=10.5,margin=".13,.09"];edge[color="#52718A",arrowsize=.65];
+ citizen[label="Citizen submits original text\nNext.js + TypeScript"];
+ api[label="FastAPI validates schema, size and permissions\nWrite immutable submission / audit metadata"];
+ urgent[label="Independent safety / urgency screening\nNever suppress emergencies based solely on AI label",fillcolor="#FFF0E7",color="#A86B52"];
+ model[label="Versioned TF-IDF + linear SVM\nThree-class provisional prediction"];
+ db[label="PostgreSQL pending review queue\nComplaint text, timestamp, model version"];
+ reviewer[label="Administrator confirms, corrects or escalates\nDecision audit, referral, workflow state"];
+ workflow[label="Acknowledged -> In Progress -> Resolved -> Closed\nSeparate state from Valid/Suspicious/Spam classification"];
+ queue[label="Quality-controlled feedback pool\nDual review if disputed; de-identification"];
+ gate[label="Offline retraining + regression tests\nApproval / rollback before new model version",fillcolor="#E6F4E8",color="#3F7D57"];
+ citizen->api->urgent->model->db->reviewer->workflow;reviewer->queue->gate; gate->model [style=dashed,color="#A87A31",label="versioned release",constraint=false];
+}

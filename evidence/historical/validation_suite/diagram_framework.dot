@@ -1,0 +1,15 @@
+digraph Conceptual {
+ graph [rankdir=TB, bgcolor="white", margin="0.18", pad="0.14", nodesep="0.38", ranksep="0.35", splines=ortho, fontname="Helvetica", fontsize=18, labelloc=t, label="Conceptual framework: controlled research and governed operation"];
+ node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=13, color="#6F8496", penwidth=1.2, fillcolor="#F1F6FA", margin="0.20,0.12"];
+ edge [color="#466478", arrowsize=.65, penwidth=1.4];
+ sources [label="RESEARCH FOUNDATION\n118 category entries | Philippine legal and reporting sources\nComplaint pragmatics | multilingual expression | labeling codebook", fillcolor="#E4ECF4"];
+ scenarios [label="CONTROLLED SYNTHETIC GENERATION\n24,000 narratives | three labels | four language groups\nSource IDs | scenarios | template-family IDs | quality checks", fillcolor="#E4ECF4"];
+ split [label="LEAKAGE-AWARE PARTITION\nGroup-disjoint training, validation and sealed test\n19,213 train | 2,399 validation | 2,388 reserved test", fillcolor="#F5F1E6"];
+ tuning [label="MODEL CONSTRUCTION AND SELECTION\nTF-IDF inside each training fold | 18-way SVM grid\n3-fold group CV + 5-fold confirmatory CV | NB baseline", fillcolor="#E8F4E6"];
+ diagnostics [label="MEASURED MODEL VALIDATION\nMacro-F1, precision, recall, confusion matrices\nLearning and loss curves | language groups | length ablation", fillcolor="#E8F4E6"];
+ gate [label="RESEARCH RELEASE GATE\nHuman label review + independent testing + software safeguards\nMODEL IS NOT AUTO-DEPLOYED BY CROSS-VALIDATION", fillcolor="#FFF0E8"];
+ live [label="PROPOSED LIVE BARANGAY WORKFLOW\nCitizen text -> FastAPI -> TF-IDF/SVM provisional label\nAdministrator confirms/corrects; case status managed separately", fillcolor="#F4F3FA"];
+ feedback [label="GOVERNED FEEDBACK CYCLE\nStore reviewed corrections -> curate -> revalidate -> version\nOnly promote after acceptance checks and rollback plan", fillcolor="#F4F3FA"];
+ sources->scenarios->split->tuning->diagnostics->gate->live->feedback;
+ feedback->gate [style=dashed, constraint=false, color="#836C77", label="future candidate"];
+}

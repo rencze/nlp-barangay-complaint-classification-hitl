@@ -1,0 +1,3 @@
+Sirang ilaw sa kanto at madilim ang daan. -> valid
+Buy now! Visit our store for a discount. -> spam
+Demo only: this output is not an independent evaluation or a research score.

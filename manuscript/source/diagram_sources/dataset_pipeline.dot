@@ -1,0 +1,11 @@
+digraph G {graph [rankdir=TB,bgcolor="white",pad=.2,nodesep=.35,ranksep=.35,fontname="Helvetica",fontsize=16,label="RESEARCH-GROUNDED SYNTHETIC DATA WORKFLOW",labelloc=t];node[shape=box,style="rounded,filled",color="#4B6575",fillcolor="#EFF5FA",fontname="Helvetica",fontsize=11,margin=".14,.11"];edge[color="#49677F",arrowsize=.65];
+ sources [label="Source register\nLaw / procedure / linguistic studies / operational rubric"];
+ categories [label="118 category definitions and scope boundaries\n60 Valid  |  28 Suspicious  |  30 Spam"];
+ scenario [label="Design controlled scenario and intended meaning\nCommunity issue OR ambiguous reporting intent OR non-complaint"];
+ language [label="Select language and reporting behavior\nBisaya / Filipino / English / mixed\nQuestion / narrative / follow-up / direct statement"];
+ wording [label="Produce original synthetic text\nTrack scenario ID, seed, source IDs, label rationale"];
+ audit [label="Audit and quarantine\nSemantic labeling, linguistic coherence, duplication, class shortcuts"];
+ split [label="Assign entire scenario families to train / validation / test\nFreeze challenges before model iteration"];
+ output [label="24,000 records with data card + partitions\nMetadata restricted from predictive features",fillcolor="#E3F3E9",color="#3F7D57"];
+ sources->categories->scenario->language->wording->audit->split->output;
+}

@@ -1,0 +1,63 @@
+\documentclass[12pt,oneside,openany]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[left=1.2in,right=1in,top=1in,bottom=.8in]{geometry}
+\usepackage{parskip}
+\setlength{\parindent}{0.5in}
+\usepackage{emptypage}
+\usepackage{graphicx}
+\usepackage{chngcntr}
+\usepackage{longtable}
+\usepackage{amsmath,amssymb}
+\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+% Additional packages required by the study's results tables and vector charts.
+\usepackage{lmodern,microtype,booktabs,tabularx,array,float}
+\usepackage{caption,xurl}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\renewcommand{\contentsname}{Table of Contents}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\headheight}{15pt}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\nouppercase{\leftmark}}\fancyhead[R]{\thepage}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\begin{center}
+\includegraphics[width=1.5in]{figs/addu.pdf}\\
+\vspace{1cm}
+{\Large\bfseries An NLP-Based Complaint Classification System for Barangay Reporting\\with Human-in-the-Loop Learning\par}
+\vspace{.95in}
+{\large In Partial Fulfillment\\of the Requirements for the Degree\\Bachelor of Science in Computer Science\par}
+\vspace{.55in}
+{\large By\par}\vspace{.22in}
+{\large Lawrence B. Gonzaga\\Warren Dominic S. Badong\par}
+\vfill
+{\large ATENEO DE DAVAO UNIVERSITY\\SCHOOL OF ARTS AND SCIENCES\\COMPUTER STUDIES CLUSTER\par}
+\vspace{.35in}
+{\large October 2026\par}
+\end{center}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\frontmatter
+\chapter*{Abstract}\addcontentsline{toc}{chapter}{Abstract}
+This study develops a multilingual three-class text-classification component for a proposed barangay complaint-reporting system. A controlled synthetic research corpus of 24,000 narratives covers 60 Valid complaint topics, 28 Suspicious clarification reasons, 30 Spam submission types, and four assigned language groups. The 118 categories guide scenario construction and auditing, rather than serving as prediction classes. A TF--IDF and linear support vector machine (SVM) is compared with a Multinomial Naive Bayes baseline. A three-fold scenario-grouped grid search evaluated 18 SVM configurations. A separate five-fold grouped cross-validation on the training partition yielded mean Macro-F1 scores of 1.0000 for SVM and 0.99245 for Naive Bayes, with standard deviations of 0.00000 and 0.00097. On 2,399 validation records, SVM achieved 1.0000 Macro-F1 while Naive Bayes achieved 0.9921. The previously evaluated 2,388-record synthetic test partition yielded Macro-F1 scores of 1.0000 and 0.9916, respectively; these scores do not establish authentic-report generalization. Training-size learning curves, 15-epoch auxiliary stochastic-gradient hinge-loss curves, class-wise confusion matrices, language-group evaluation and feature-ablation diagnostics help interpret these scores. These observations characterize performance on researcher-generated messages and cannot independently establish reliability on previously unseen styles of citizen reporting. Subsequent reproducibility verification corroborated the original recorded metrics on the unchanged corpus. A separate meaning-preserving word/character candidate, with and without grouped sigmoid calibration, tied the reference at 1.0000 development validation Macro-F1; no classification improvement was demonstrated and no candidate test evaluation was performed. Probability reliability outside the synthetic development distribution, administrator verification, accountable case management and controlled offline feedback require independent validation and end-to-end implementation testing. 
+\par\medskip\textbf{Keywords:} barangay reporting; complaint classification; natural language processing; TF--IDF; support vector machine; controlled synthetic data; group cross-validation; human-in-the-loop.
+\tableofcontents
+\listoffigures
+\listoftables
+\mainmatter
+\include{chapters/introduction}
+\include{chapters/literature_review}
+\input{chapters/literature_research_synthesis}
+\include{chapters/methodology}
+\include{chapters/results_and_discussion}
+\include{chapters/conclusions_and_recommendations}
+\input{chapters/appendices}
+\backmatter
+\renewcommand{\bibname}{References}
+\cleardoublepage\phantomsection\addcontentsline{toc}{chapter}{References}
+\input{references}
+\end{document}

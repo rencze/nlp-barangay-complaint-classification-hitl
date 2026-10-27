@@ -1,0 +1,14 @@
+digraph States {
+ graph [rankdir=TB, bgcolor="white", pad="0.15", ranksep="0.28", nodesep="0.30", splines=ortho, fontname="Helvetica", fontsize=18, labelloc=t, label="Human-reviewed complaint processing: illustrative states"];
+ node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=13, margin="0.22,0.12", color="#65798B", fillcolor="#EAF3F7"];
+ edge [color="#53697D",penwidth=1.4,arrowsize=.65];
+ sub [label="Submitted narrative\nCitizen message and timestamp preserved"];
+ pending [label="Pending administrator review\nModel label is provisional, not a case status",fillcolor="#FAF0E2"];
+ clarification [label="Clarification requested (optional)\nAmbiguity or missing context; retain report"];
+ examined [label="Acknowledged / verified / referred\nHuman determines responsible office"];
+ active [label="In progress\nInvestigation or referral tracked"];
+ resolved [label="Resolved\nActions or referral outcome documented",fillcolor="#E7F3E6"];
+ closed [label="Closed and retained in audit log\nStatus remains distinct from model class",fillcolor="#E7F3E6"];
+ sub->pending->examined->active->resolved->closed;
+ pending->clarification [label="details needed"];clarification->examined [label="returned details"];
+}

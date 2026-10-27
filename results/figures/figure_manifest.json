@@ -1,0 +1,170 @@
+{
+  "auxiliary_sgd_loss.pdf": {
+    "bytes": 14325,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "auxiliary_sgd_loss.png": {
+    "bytes": 168815,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "auxiliary_sgd_loss.svg": {
+    "bytes": 19317,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "candidate_validation_results.pdf": {
+    "bytes": 26707,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "candidate_validation_results.png": {
+    "bytes": 165244,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "candidate_validation_results.svg": {
+    "bytes": 10827,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "cross_validation_results.pdf": {
+    "bytes": 27152,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "cross_validation_results.png": {
+    "bytes": 275373,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "cross_validation_results.svg": {
+    "bytes": 29119,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "hyperparameter_tuning_results.pdf": {
+    "bytes": 20666,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "hyperparameter_tuning_results.png": {
+    "bytes": 437787,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "hyperparameter_tuning_results.svg": {
+    "bytes": 46146,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "language_group_validation.pdf": {
+    "bytes": 14241,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "language_group_validation.png": {
+    "bytes": 211238,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "language_group_validation.svg": {
+    "bytes": 13030,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "model_performance_comparison.pdf": {
+    "bytes": 17094,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "model_performance_comparison.png": {
+    "bytes": 375856,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "model_performance_comparison.svg": {
+    "bytes": 27920,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "naive_bayes_testing_confusion_matrix.pdf": {
+    "bytes": 20751,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "naive_bayes_testing_confusion_matrix.png": {
+    "bytes": 155681,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "naive_bayes_testing_confusion_matrix.svg": {
+    "bytes": 32168,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "naive_bayes_validation_confusion_matrix.pdf": {
+    "bytes": 20012,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "naive_bayes_validation_confusion_matrix.png": {
+    "bytes": 156109,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "naive_bayes_validation_confusion_matrix.svg": {
+    "bytes": 32563,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "statistical_comparison.pdf": {
+    "bytes": 27645,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "statistical_comparison.png": {
+    "bytes": 323098,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "statistical_comparison.svg": {
+    "bytes": 11124,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_learning_curve.pdf": {
+    "bytes": 13768,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_learning_curve.png": {
+    "bytes": 138065,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_learning_curve.svg": {
+    "bytes": 17357,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_testing_confusion_matrix.pdf": {
+    "bytes": 20266,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_testing_confusion_matrix.png": {
+    "bytes": 159606,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_testing_confusion_matrix.svg": {
+    "bytes": 32572,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_validation_confusion_matrix.pdf": {
+    "bytes": 19040,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_validation_confusion_matrix.png": {
+    "bytes": 153697,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "svm_validation_confusion_matrix.svg": {
+    "bytes": 32551,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "testing_performance.pdf": {
+    "bytes": 25174,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "testing_performance.png": {
+    "bytes": 184611,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "testing_performance.svg": {
+    "bytes": 12247,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "validation_performance.pdf": {
+    "bytes": 24793,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "validation_performance.png": {
+    "bytes": 179962,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  },
+  "validation_performance.svg": {
+    "bytes": 12240,
+    "source": "Executed reference/candidate metrics, original-script rerun grid and grouped CV"
+  }
+}

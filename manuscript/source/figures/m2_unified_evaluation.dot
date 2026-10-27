@@ -1,0 +1,22 @@
+digraph G {
+ graph [rankdir=TB, bgcolor="white", fontname="Times-Roman", nodesep=.42, ranksep=.60, pad=.18, splines=ortho];
+ node [shape=box, style="solid", color="black", fontname="Times-Roman", fontsize=14, penwidth=1.3, margin=".20,.13"];
+ edge [color="black", penwidth=1.25, arrowsize=.6];
+ dataset [label=<<B>24,000 researcher-constructed synthetic narratives</B><BR/>Three classes; scenario-family grouping>,width=6.4];
+ split [label=<<B>Group-aware partitioning</B><BR/>Prevent scenario-family overlap>, width=5.6];
+ {rank=same; train [label=<<B>Training: 19,213</B><BR/>Fit vocabulary, TF-IDF, models>,width=3.0]; valid [label=<<B>Validation: 2,399</B><BR/>Development-stage performance>,width=3.0]; test [label=<<B>Synthetic test: 2,388</B><BR/>Recorded final evaluation>,width=3.0];}
+ cv [label=<<B>3-fold grouped grid search</B><BR/>18 candidate LinearSVC settings>,width=3.05];
+ cv5 [label=<<B>Separate 5-fold grouped CV</B><BR/>Fixed models; stability only>,width=3.05];
+ final_model [label=<<B>Fit selected SVM and baseline</B><BR/>Train partition only>,width=3.05];
+ vm [label=<<B>Fixed validation</B><BR/>Accuracy, class P/R/F1, Macro-F1>,width=3.05];
+ tm [label=<<B>Recorded synthetic test</B><BR/>2,388 shared cases; McNemar>,width=3.05];
+ dataset -> split;
+ split -> train; split -> valid; split -> test;
+ train -> cv -> cv5 -> final_model;
+ valid -> vm; test -> tm;
+ final_model -> vm [style=dashed, constraint=false];
+ final_model -> tm [style=dashed, constraint=false];
+ {rank=same; cv; vm; tm;}
+ note [shape=plaintext,fontsize=11,label="Dashed links = the same fitted model evaluates held-out partitions; neither is fitted during model selection."];
+ final_model -> note [style=invis];
+}

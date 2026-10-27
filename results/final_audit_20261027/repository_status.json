@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-27",
+  "url": "https://github.com/rencze/nlp-barangay-complaint-classification-hitl",
+  "anonymous_web_access": true,
+  "fresh_clone_succeeded": true,
+  "observed_public_main": "13dadbc3f82a11bce0383171624a78d4c3ccefc8",
+  "public_readme_has_install_or_run_instructions": false,
+  "public_study_dataset_and_NB_grouped_experiments_present": false,
+  "public_demo_command_succeeded": true,
+  "noninteractive_write_access": false,
+  "write_access_failure": "could not read Username; terminal prompts disabled; no noninteractive credentials",
+  "local_changes_committed": false,
+  "local_changes_pushed": false,
+  "publication_instructions": "docs/PUBLISH_CORRECTIONS.md"
+}

@@ -1,0 +1,84 @@
+erDiagram
+  USERS ||--o{ USER_ROLES : has
+  ROLES ||--o{ USER_ROLES : grants
+  ROLES ||--o{ ROLE_PERMISSIONS : has
+  PERMISSIONS ||--o{ ROLE_PERMISSIONS : includes
+  USERS ||--o{ SESSIONS : authenticates
+  USERS ||--o{ COMPLAINTS : submits
+  COMPLAINTS ||--|{ NARRATIVE_VERSIONS : preserves
+  NARRATIVE_VERSIONS ||--o{ PREDICTIONS : classified_by
+  MODEL_VERSIONS ||--o{ PREDICTIONS : produces
+  NARRATIVE_VERSIONS ||--o{ ADMINISTRATOR_REVIEWS : reviewed_as
+  PREDICTIONS ||--o{ ADMINISTRATOR_REVIEWS : informs
+  USERS ||--o{ ADMINISTRATOR_REVIEWS : performs
+  ADMINISTRATOR_REVIEWS ||--o{ VERIFIED_LABELS : supports
+  NARRATIVE_VERSIONS ||--o{ VERIFIED_LABELS : independently_labeled
+  COMPLAINTS ||--o{ DISPOSITIONS : decided_by
+  NARRATIVE_VERSIONS ||--o{ DISPOSITIONS : decision_basis
+  COMPLAINTS ||--o{ CLARIFICATION_REQUESTS : needs
+  CLARIFICATION_REQUESTS ||--o{ CLARIFICATION_RESPONSES : answered_by
+  NARRATIVE_VERSIONS ||--o{ CLARIFICATION_RESPONSES : revises
+  COMPLAINTS ||--o| ACCEPTED_CASES : accepted_only
+  DISPOSITIONS ||--o| ACCEPTED_CASES : accepted_disposition
+  DEADLINE_POLICIES ||--o{ ACCEPTED_CASES : governs
+  ACCEPTED_CASES ||--o{ CASE_ASSIGNMENTS : assigned
+  USERS ||--o{ CASE_ASSIGNMENTS : responsible
+  ACCEPTED_CASES ||--o{ CASE_ACTIONS : records
+  ACCEPTED_CASES ||--o{ STATUS_TRANSITIONS : changes
+  USERS ||--o{ NOTIFICATIONS : receives
+  COMPLAINTS ||--o{ NOTIFICATIONS : concerning
+  VERIFIED_LABELS ||--o| FEEDBACK_EXAMPLES : quality_screened
+  FEEDBACK_EXAMPLES ||--o{ TRAINING_RUN_EXAMPLES : included
+  TRAINING_RUNS ||--o{ TRAINING_RUN_EXAMPLES : freezes
+  TRAINING_RUNS ||--o{ MODEL_VERSIONS : produces
+  MODEL_VERSIONS ||--o{ MODEL_APPROVALS : gated_by
+  USERS ||--o{ MODEL_APPROVALS : authorizes
+  USERS ||--o{ AUDIT_EVENTS : accountable
+  AUDIT_EVENTS ||--o{ OUTBOX_JOBS : schedules
+  COMPLAINTS {
+    uuid id PK
+    uuid resident_id FK
+    string tracking_reference UK
+    uuid current_version_id FK
+    int row_version
+  }
+  NARRATIVE_VERSIONS {
+    uuid id PK
+    uuid complaint_id FK
+    int version_no
+    text original_text
+    string text_hash
+  }
+  PREDICTIONS {
+    uuid id PK
+    uuid narrative_version_id FK
+    uuid model_version_id FK
+    string predicted_label
+    json probabilities_nullable
+  }
+  VERIFIED_LABELS {
+    uuid id PK
+    uuid narrative_version_id FK
+    uuid review_id FK
+    string verified_label
+  }
+  DISPOSITIONS {
+    uuid id PK
+    uuid complaint_id FK
+    string state
+    text reason
+  }
+  ACCEPTED_CASES {
+    uuid id PK
+    uuid complaint_id FK,UK
+    uuid accepted_disposition_id FK
+    string current_status
+    timestamp due_at
+  }
+  MODEL_VERSIONS {
+    uuid id PK
+    uuid training_run_id FK
+    string sha256
+    string artifact_uri
+    string approval_state
+  }

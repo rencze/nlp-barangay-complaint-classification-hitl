@@ -1,0 +1,20 @@
+{
+  "validation": {
+    "a_both_correct": 2380,
+    "b_baseline_only": 0,
+    "c_svm_only": 19,
+    "d_both_wrong": 0,
+    "exact_two_sided_p": 3.814697265625e-06,
+    "continuity_corrected_chi2": 17.05263157894737,
+    "limitation": "Record pairs share generated families; nominal p is descriptive and may be anticonservative under dependence. This compares pipelines, not isolated estimators."
+  },
+  "test": {
+    "a_both_correct": 2368,
+    "b_baseline_only": 0,
+    "c_svm_only": 20,
+    "d_both_wrong": 0,
+    "exact_two_sided_p": 1.9073486328125e-06,
+    "continuity_corrected_chi2": 18.05,
+    "limitation": "Record pairs share generated families; nominal p is descriptive and may be anticonservative under dependence. This compares pipelines, not isolated estimators."
+  }
+}

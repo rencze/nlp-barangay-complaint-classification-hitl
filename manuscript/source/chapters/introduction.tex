@@ -1,0 +1,61 @@
+\chapter{Introduction}
+
+\section{Background of the Study}
+Citizen complaint management is an essential function of barangay governance in the Philippines, where residents report concerns such as public safety issues, infrastructure problems, and community disturbances. Despite its importance, many barangay offices continue to rely on manual validation processes in handling complaints, resulting in delays, inconsistencies in evaluation, and inefficiencies in overall service delivery.
+
+Davao City Reports offers a relevant local precedent for online submission, tracking references, status history, complaint routing and resident feedback. However, a municipal platform is not evidence that an identical barangay application has already been deployed or validated \cite{dcr}. The proposed study therefore separates case-management design from the experimentally evaluated classification component. It addresses the need for traceable administrative records while examining whether sparse-text NLP models can distinguish coherent complaints, materially unclear complaints and clearly non-complaint submissions.
+
+Filipino complaint-writing research and synthetic-data evaluation studies motivate sensitivity to informal expressions, code-switching and generation artifacts \cite{deleon,li2023,benderfriedman}. The text-only TF--IDF plus Linear SVM prototype reported here can be compared with a Naive Bayes baseline on the controlled corpus, but operational benefits require authentic external evaluation. Administrator review, measured annotation quality, controlled retraining and accountable case tracking are included as proposed extensions that must be implemented before their effectiveness can be claimed.
+
+\section{Statement of the Problem}
+This study aims to develop an automated barangay complaint classification system using Natural Language Processing (NLP) and machine learning to improve the accuracy, efficiency, and reliability of complaint processing.
+
+Specifically, the study seeks to answer the following questions:
+\begin{enumerate}
+    \item How can a web-based barangay complaint system be developed to support efficient submission, processing, and lifecycle tracking of citizen complaints?
+    \item How can Natural Language Processing (NLP) techniques using TF-IDF and Support Vector Machine (SVM) classify complaints into valid, suspicious, and spam categories?
+    \item How can a Human-in-the-Loop (HITL) mechanism be integrated to provide traceable staff corrections and evaluate whether controlled retraining improves the classification model?
+    \item How effective is the proposed system in terms of accuracy, precision, recall, and F1-score in classifying complaints compared to baseline or traditional methods?
+\end{enumerate}
+
+\section{Objectives of the Study}
+This study aims to develop and evaluate an automated barangay complaint classification system using Natural Language Processing (NLP) and machine learning.
+
+Specifically, the study aims to:
+\begin{enumerate}
+    \item Develop a web-based barangay complaint system that streamlines the submission, processing, and lifecycle tracking of citizen complaints.
+    \item Evaluate the effectiveness of TF-IDF and Support Vector Machine (SVM) in classifying multilingual complaint text (Bisaya, Filipino, and English) into valid, suspicious, and spam categories.
+    \item Design and evaluate a Human-in-the-Loop (HITL) protocol for administrator review, correction logging, curated feedback and controlled model updates.
+    \item Evaluate the performance of the proposed system in terms of accuracy, precision, recall, F1-score, with subgroup, boundary-case and held-out challenge tests; evaluate operational workload separately when instrumented.
+\end{enumerate}
+
+\section{Significance of the Study}
+This study contributes to the advancement of intelligent e-governance systems by improving barangay-level complaint management through automated text classification. It addresses inefficiencies in manual validation and supports more efficient and data-driven public service processes.
+
+From a technical perspective, this research contributes to Natural Language Processing (NLP) and machine learning classification by applying these methods in a multilingual context involving Bisaya, Filipino, and English. It also extends existing work by integrating a Human-in-the-Loop (HITL) mechanism, proposing a testable route for administrator-verified feedback and controlled future model improvement.
+
+The study introduces a framework that combines NLP-based text classification with a state-transition workflow to ensure structured tracking of complaint lifecycles. This is intended to support accountability and transparency through traceable administrative actions; operational gains have not yet been demonstrated.
+
+For stakeholders, the system provides practical benefits to barangay officials by potentially improving the traceability of administrative decisions; reductions in manual workload and processing time require separate field evaluation.
+
+Overall, the study bridges the gap between traditional e-governance systems and adaptive intelligent solutions, offering a scalable approach that can be adopted by other local government units to improve administrative efficiency and transparency.
+
+\section{Scope and Limitations}
+\textbf{Scope}
+
+This study focuses on a proposed web-based barangay reporting prototype built with a Next.js/TypeScript citizen and administrator interface, a FastAPI/Python backend, and PostgreSQL persistence. The backend incorporates Natural Language Processing (NLP), Term Frequency--Inverse Document Frequency (TF-IDF), and a linear Support Vector Machine (SVM) for recorded classification of Bisaya, Filipino, English, and mixed/code-switched complaint inputs as Valid, Suspicious, or Spam. The full-stack selection is an implementation design; the synthetic corpus and EDA do not alone demonstrate that every application feature is deployed.
+
+The intended system incorporates a Human-in-the-Loop (HITL) mechanism for staff verification and recorded corrections, with controlled later model retraining. PostgreSQL stores complaint data, review history, and distinct workflow states that track each complaint from submission to resolution.
+
+\textbf{Limitations}
+
+This study uses a researcher-generated synthetic complaint dataset and does not include full-scale real-time deployment across multiple barangays. The system is restricted to text-based complaints and does not support multimedia inputs such as images, videos, or audio.
+
+Additionally, the system does not include advanced user identity verification and cannot fully guarantee the authenticity of anonymous submissions. The model's performance may vary depending on dataset size, data quality, and the level of code-switching in multilingual inputs. Lastly, the system functions only as a decision-support tool and does not replace the final judgment of barangay officials.
+
+
+\section{Research Questions for Controlled Data Adaptation}
+Beyond interface digitization, the experimental contribution concerns the effectiveness of a controlled synthetic corpus. The study asks whether explicitly varying linguistic form, incident context, and ambiguous-versus-meaningful intent provides a reproducible means of testing a three-class complaint classifier. A second question asks whether class-balanced internal scores are stable on independently written challenges rather than merely recognizing the generator's recurrent lexical patterns. A third question concerns how reviewed administrator corrections could be introduced without contaminating held-out evaluations or silently changing live predictions. These are evaluated or scoped separately: dataset construction and baseline model testing have experimental results; operational improvements and feedback-driven retraining remain proposed until independently tested.
+
+\section{Research Status and Delimitations}
+The completed experimental corpus comprises 24,000 researcher-constructed narratives partitioned for model development. The study does not claim a representative sample of Davao barangay submissions, independent human adjudication of all labels, comprehensive language fluency certification, or live deployment. The 118-item category register is a \emph{scenario and auditing framework}; it is not the target output space of the classifier. The deployment interface would predict only Valid, Suspicious, or Spam, with an administrator retaining final authority. Accuracy alone is insufficient to establish deployment readiness because authentication, privacy, referral, latency, state transition, risk escalation and model-update controls require separate tests \cite{ribeiro,sklearn}.

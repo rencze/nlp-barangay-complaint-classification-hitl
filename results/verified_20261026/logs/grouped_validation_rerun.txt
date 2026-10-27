@@ -1,0 +1,94 @@
+TF-IDF + Linear SVM 1 F1 1.0 seconds 0.41
+TF-IDF + Naive Bayes 1 F1 0.99323 seconds 0.62
+TF-IDF + Linear SVM 2 F1 1.0 seconds 0.4
+TF-IDF + Naive Bayes 2 F1 0.99323 seconds 0.61
+TF-IDF + Linear SVM 3 F1 1.0 seconds 0.41
+TF-IDF + Naive Bayes 3 F1 0.99297 seconds 0.59
+TF-IDF + Linear SVM 4 F1 1.0 seconds 0.41
+TF-IDF + Naive Bayes 4 F1 0.99115 seconds 0.61
+TF-IDF + Linear SVM 5 F1 1.0 seconds 0.42
+TF-IDF + Naive Bayes 5 F1 0.99167 seconds 0.63
+FINAL SUMMARY: {
+  "five_fold": [
+    {
+      "model": "TF-IDF + Linear SVM",
+      "train_f1_mean": 1.0,
+      "cv_f1_mean": 1.0,
+      "cv_f1_sample_sd": 0.0,
+      "cv_accuracy_mean": 1.0,
+      "total_fit_seconds": 2.05
+    },
+    {
+      "model": "TF-IDF + Naive Bayes",
+      "train_f1_mean": 0.9924521487296273,
+      "cv_f1_mean": 0.9924523987130842,
+      "cv_f1_sample_sd": 0.0009709125998406728,
+      "cv_accuracy_mean": 0.992453202328701,
+      "total_fit_seconds": 3.06
+    }
+  ],
+  "validation": [
+    {
+      "model": "TF-IDF + Linear SVM",
+      "validation_n": 2399,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "misclassified": 0
+    },
+    {
+      "model": "TF-IDF + Naive Bayes",
+      "validation_n": 2399,
+      "accuracy": 0.992080033347228,
+      "macro_precision": 0.9922669922669923,
+      "macro_recall": 0.9920734251147266,
+      "macro_f1": 0.9920771428269667,
+      "misclassified": 19
+    }
+  ],
+  "length": {
+    "n": 2399,
+    "accuracy": 0.5493955814922884,
+    "macro_f1": 0.5371612347685245,
+    "confusion_matrix": [
+      [
+        223,
+        210,
+        367
+      ],
+      [
+        182,
+        558,
+        60
+      ],
+      [
+        201,
+        61,
+        537
+      ]
+    ]
+  },
+  "char": {
+    "n": 2399,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        800,
+        0,
+        0
+      ],
+      [
+        0,
+        800,
+        0
+      ],
+      [
+        0,
+        0,
+        799
+      ]
+    ]
+  }
+}

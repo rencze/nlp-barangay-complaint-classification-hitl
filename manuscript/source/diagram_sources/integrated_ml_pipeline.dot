@@ -1,0 +1,43 @@
+digraph G {
+  graph [rankdir=TB, splines=ortho, nodesep=0.45, ranksep=0.55, pad=0.15, bgcolor="white"];
+  node [shape=box, style="rounded,filled", fillcolor="#F8F8F8", color="#333333", fontname="Helvetica", fontsize=12, margin="0.10,0.06"];
+  edge [color="#333333", arrowsize=0.8, penwidth=1.2];
+
+  input [label="Citizen Complaint Text\n(Bisaya / Filipino / English / Mixed)", fillcolor="#EAF2FF"];
+
+  subgraph cluster_nlp {
+    label="NLP Preprocessing Module";
+    fontsize=14; fontname="Helvetica-Bold"; color="#7A7A7A"; style="rounded";
+    n1 [label="Integrity and Privacy Check\n(non-empty text; remove direct identifiers)"];
+    n2 [label="Conservative Normalization\n(whitespace, encoding, case policy)"];
+    n3 [label="Tokenization and Stopword Policy\n(language-aware; keep meaningful negation)"];
+    n4 [label="Optional Stemming / Lemmatization\n(retain only if validation is not harmed)"];
+  }
+
+  subgraph cluster_tfidf {
+    label="TF-IDF Feature Representation";
+    fontsize=14; fontname="Helvetica-Bold"; color="#7A7A7A"; style="rounded";
+    t1 [label="Fit Vocabulary on Training Data Only"];
+    t2 [label="Term Frequency (TF) + Inverse Document Frequency (IDF)"];
+    t3 [label="Sparse Numerical Vector\n(Unigrams / Bigrams; min_df control)"];
+  }
+
+  subgraph cluster_svm {
+    label="Linear SVM Classification";
+    fontsize=14; fontname="Helvetica-Bold"; color="#7A7A7A"; style="rounded";
+    s1 [label="Train LinearSVC with Regularization C"];
+    s2 [label="Learn Decision Boundaries\nin High-Dimensional Feature Space"];
+    s3 [label="Provisional Output:\nValid / Suspicious / Spam\n+ decision margin"];
+  }
+
+  subgraph cluster_hitl {
+    label="Human-in-the-Loop Review and Controlled Feedback";
+    fontsize=14; fontname="Helvetica-Bold"; color="#7A7A7A"; style="rounded";
+    h1 [label="Administrator Reviews Provisional Class"];
+    h2 [label="Confirm or Correct Label\n(and update complaint case status separately)"];
+    h3 [label="Feedback Store\n(versioned record of text, prediction, correction)"];
+    h4 [label="Offline Retraining Candidate Set\n(curated before any future model update)", fillcolor="#FFF8E8"];
+  }
+
+  input -> n1 -> n2 -> n3 -> n4 -> t1 -> t2 -> t3 -> s1 -> s2 -> s3 -> h1 -> h2 -> h3 -> h4;
+}

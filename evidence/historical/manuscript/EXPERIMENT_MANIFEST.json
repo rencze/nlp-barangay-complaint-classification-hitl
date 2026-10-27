@@ -1,0 +1,31 @@
+{
+  "purpose": "Full thesis Milestone 3 with supplementary 5-fold grouped validation",
+  "dataset_rows": 24000,
+  "class_counts": {
+    "Valid": 8000,
+    "Suspicious": 8000,
+    "Spam": 8000
+  },
+  "splits": {
+    "train": 19213,
+    "validation": 2399,
+    "test_previously_evaluated": 2388
+  },
+  "dataset_sha256": "35414af2dc63e2870928bd1853c557ed301dbdae80416a0bf37be00648d92e28",
+  "python_version": "3.13.5",
+  "sklearn_version": "1.8.0",
+  "original_hyperparam_results": "results/hyperparameter_grid_v2.csv",
+  "complete_manuscript": "main.tex",
+  "independent_label_review_completed": false,
+  "final_test_used_in_new_validation_suite": false,
+  "fivefold_cv_script": "validation_suite/run_grouped_validation.py",
+  "original_model_script": "reproducibility_scripts/evaluate_models.py",
+  "dataset": "data/ALL_SYNTHETIC_V2.csv",
+  "dataset_family_split_column": "split",
+  "dataset_group_column": "scenario_family_id",
+  "study_scope": "repeat experiment on existing 24000-record synthetic corpus only",
+  "historical_synthetic_test_previously_evaluated": true,
+  "new_dataset_for_rerun": false,
+  "proposed_combined_word_character_model_evaluated": false,
+  "model_and_system_tests_are_separate": true
+}

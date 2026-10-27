@@ -1,0 +1,9 @@
+model,language_group,n,accuracy,macro_f1
+TF-IDF + Linear SVM,Bisaya,594,1.0,1.0
+TF-IDF + Linear SVM,Filipino,616,1.0,1.0
+TF-IDF + Linear SVM,English,596,1.0,1.0
+TF-IDF + Linear SVM,Mixed,593,1.0,1.0
+TF-IDF + Naive Bayes,Bisaya,594,0.9932659932659933,0.993281889870376
+TF-IDF + Naive Bayes,Filipino,616,0.9935064935064936,0.9934304207119741
+TF-IDF + Naive Bayes,English,596,0.9899328859060402,0.9898948657752373
+TF-IDF + Naive Bayes,Mixed,593,0.9915682967959528,0.9916666145830079

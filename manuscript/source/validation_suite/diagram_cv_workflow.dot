@@ -1,0 +1,13 @@
+digraph Protocol {
+ graph [rankdir=TB, bgcolor="white", pad="0.13", nodesep="0.30", ranksep="0.25", splines=ortho, fontsize=18, labelloc=t, label="Model-selection and validation protocol"];
+ node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=14, color="#78909E", fillcolor="#EDF5FA", margin="0.25,0.14"];
+ edge [color="#476D82", penwidth=1.4, arrowsize=.67];
+ a [label="24,000 narratives | Valid, Suspicious, Spam\nPartition by scenario-family ID; metadata excluded from SVM"];
+ b [label="TRAIN -- 19,213 records\n3-fold grouped GridSearchCV, 18 candidate SVM settings", fillcolor="#E6F3E8"];
+ c [label="ADDITIONAL 5-FOLD GROUPED VALIDATION\nSelected LinearSVC and Naive Bayes baseline\nNo scenario-family ID overlaps across held-out/training groups", fillcolor="#E6F3E8"];
+ d [label="IN EVERY FOLD\nFit TF-IDF on fold-training only; score held-out fold\nReport fold n, class counts, Macro-F1, mean, sample SD"];
+ e [label="FIXED VALIDATION -- 2,399 records\nPredict with model fitted on full training partition\nAccuracy, confusion, class recall, language-group outcomes", fillcolor="#FAF2DA"];
+ f [label="DIAGNOSTICS\nLearning vs training size | 15-epoch auxiliary SGD loss\nLength-only ablation | exploratory character-gram model"];
+ g [label="RESERVED TEST -- 2,388 records\nExcluded from model selection and diagnostic validation", fillcolor="#F7E6E6"];
+ a->b->c->d->e->f->g;
+}

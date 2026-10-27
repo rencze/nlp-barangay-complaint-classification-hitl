@@ -1,0 +1,5 @@
+# Preserve research CSV bytes and recorded SHA-256 hashes across platforms.
+/data/*.csv -text
+/manuscript/**/*.csv -text
+/evidence/**/*.csv -text
+/results/**/*.csv -text

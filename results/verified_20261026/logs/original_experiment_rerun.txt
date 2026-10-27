@@ -1,0 +1,17 @@
+Loaded 19213 2399 2388
+NB validation 0.992077
+SVM validation 1.0 params {'svm__C': 0.1, 'tfidf__min_df': 2, 'tfidf__ngram_range': (1, 1)}
+SVM test 1.0 NB test 0.991624
+RESULT SUMMARY {
+  "chosen": {
+    "svm__C": "0.1",
+    "tfidf__min_df": "2",
+    "tfidf__ngram_range": "(1, 1)"
+  },
+  "cv": 1.0,
+  "svm_validation": 1.0,
+  "svm_test": 1.0,
+  "nb_test": 0.991624,
+  "length_only": 0.542697,
+  "probe": {}
+}

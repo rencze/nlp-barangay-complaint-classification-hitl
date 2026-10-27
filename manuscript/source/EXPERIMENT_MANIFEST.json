@@ -1,0 +1,64 @@
+{
+  "purpose": "Full thesis Milestone 3 with supplementary 5-fold grouped validation",
+  "dataset_rows": 24000,
+  "class_counts": {
+    "Valid": 8000,
+    "Suspicious": 8000,
+    "Spam": 8000
+  },
+  "splits": {
+    "train": 19213,
+    "validation": 2399,
+    "test_previously_evaluated": 2388
+  },
+  "dataset_sha256": "35414af2dc63e2870928bd1853c557ed301dbdae80416a0bf37be00648d92e28",
+  "python_version": "3.13.5",
+  "sklearn_version": "1.8.0",
+  "original_hyperparam_results": "results/hyperparameter_grid_v2.csv",
+  "complete_manuscript": "main.tex",
+  "independent_label_review_completed": false,
+  "final_test_used_in_new_validation_suite": false,
+  "fivefold_cv_script": "validation_suite/run_grouped_validation.py",
+  "original_model_script": "reproducibility_scripts/evaluate_models.py",
+  "dataset": "data/ALL_SYNTHETIC_V2.csv",
+  "dataset_family_split_column": "split",
+  "dataset_group_column": "scenario_family_id",
+  "study_scope": "repeat experiment on existing 24000-record synthetic corpus only",
+  "historical_synthetic_test_previously_evaluated": true,
+  "new_dataset_for_rerun": false,
+  "proposed_combined_word_character_model_evaluated": true,
+  "model_and_system_tests_are_separate": true,
+  "historical_environment_note": "Original versions preserved in evidence/historical; rerun versions differ as documented.",
+  "rerun_environment": {
+    "python": "3.13.5",
+    "os": "Windows",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "seed": 20261026,
+    "versions": {
+      "scikit-learn": "1.8.0",
+      "numpy": "2.4.4",
+      "scipy": "1.17.1",
+      "pandas": "3.0.2",
+      "matplotlib": "3.11.2",
+      "joblib": "1.5.3"
+    },
+    "git_head": "13dadbc3f82a11bce0383171624a78d4c3ccefc8",
+    "working_tree_note": "Uncommitted pre-existing files preserved; inventory hashes identify actual source."
+  },
+  "candidate_scope": "existing development validation only; no candidate test evaluation",
+  "probability_calibration_executed": true,
+  "operational_calibration_reliability_established": false,
+  "synthetic_test_reproduced": true,
+  "live_HITL_validated": false,
+  "feedback_retraining_demonstrated": false,
+  "final_milestone2_audit": {
+    "date": "2026-10-27",
+    "full_training_repeated": false,
+    "canonical_dataset": "data/Barangay_Complaint_Dataset_24000.csv",
+    "public_url_verified": true,
+    "observed_public_commit": "13dadbc3f82a11bce0383171624a78d4c3ccefc8",
+    "corrected_changes_pushed": false,
+    "reason": "No noninteractive GitHub credentials available"
+  }
+}

@@ -1,0 +1,25 @@
+digraph G {
+ graph [rankdir=TB, bgcolor="white", nodesep=.26, ranksep=.36, pad=.19, fontname="Helvetica", fontsize=16, label="TWO-PHASE CONCEPTUAL FRAMEWORK", labelloc=t, labeljust=c];
+ node [fontname="Helvetica", fontsize=10, shape=box, style="rounded,filled", fillcolor="#EDF4FA", color="#42657B", margin=".12,.07"]; edge [color="#52718A", arrowsize=.6];
+ subgraph cluster_offline { label="PHASE I  |  RESEARCH & MODEL PREPARATION (OFFLINE)"; style="rounded"; color="#7294A9";
+  legal [label="Evidence foundations\nPhilippine laws + complaint procedure\nLinguistics + spam research"];
+  taxonomy [label="118-category scenario register\n60 topics | 28 review reasons | 30 spam types"];
+  generation [label="Controlled synthetic generation\n24,000 examples | 4 assigned languages\nMeaning-first labels + writing variation"];
+  qa [label="Data checks and annotation audit\nDuplicates, label review, source traceability\nScenario-family partitioning"];
+  train [label="TF-IDF features + candidate models\nSVM / Multinomial Naive Bayes\nGrouped CV and hyperparameter selection"];
+  evaluate [label="Evaluation gate\nValidation / frozen test / challenge\nPer-language + boundary/error diagnostics"];
+  artifact [label="Versioned model, vectorizer and rubric\nRelease only after approval",fillcolor="#E4F4EA", color="#41805A"];
+  legal->taxonomy->generation->qa->train->evaluate->artifact;
+ }
+ subgraph cluster_live { label="PHASE II  |  CITIZEN REPORTING & HUMAN GOVERNANCE (LIVE / PROPOSED)";style="rounded";color="#7294A9";
+  submission [label="Resident: complaint narrative\nWeb form (Next.js + TypeScript)"];
+  safety [label="Backend checks (FastAPI)\nAuthentication, input limits\nUrgent keyword/safety escalation"];
+  inference [label="TF-IDF + SVM prediction\nValid / Suspicious / Spam\nModel version + score/margin"];
+  review [label="Barangay administrator\nConfirm / correct / escalate / route"];
+  store [label="PostgreSQL audit trail\nText, decision, reviewer, timestamps\nComplaint workflow state"];
+  feedback [label="Approved feedback queue\nPrivacy screening and quality checks"];
+  submission->safety->inference->review->store->feedback;
+ }
+ artifact->inference [label="Controlled deployment",color="#388451",fontcolor="#388451"];
+ feedback->qa [label="Offline retraining candidate;\nnever automatic live learning", style=dashed, constraint=false, color="#A66F32"];
+}

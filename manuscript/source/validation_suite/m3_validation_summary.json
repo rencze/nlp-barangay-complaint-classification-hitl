@@ -1,0 +1,146 @@
+{
+  "training_n": 19213,
+  "validation_n": 2399,
+  "folds": [
+    {
+      "fold": 1,
+      "train_records": 15371,
+      "heldout_records": 3842,
+      "train_families": 6042,
+      "heldout_families": 1510,
+      "overlapping_families": 0,
+      "heldout_valid": 1281,
+      "heldout_suspicious": 1281,
+      "heldout_spam": 1280
+    },
+    {
+      "fold": 2,
+      "train_records": 15371,
+      "heldout_records": 3842,
+      "train_families": 6042,
+      "heldout_families": 1510,
+      "overlapping_families": 0,
+      "heldout_valid": 1281,
+      "heldout_suspicious": 1281,
+      "heldout_spam": 1280
+    },
+    {
+      "fold": 3,
+      "train_records": 15371,
+      "heldout_records": 3842,
+      "train_families": 6042,
+      "heldout_families": 1510,
+      "overlapping_families": 0,
+      "heldout_valid": 1281,
+      "heldout_suspicious": 1281,
+      "heldout_spam": 1280
+    },
+    {
+      "fold": 4,
+      "train_records": 15369,
+      "heldout_records": 3844,
+      "train_families": 6041,
+      "heldout_families": 1511,
+      "overlapping_families": 0,
+      "heldout_valid": 1281,
+      "heldout_suspicious": 1283,
+      "heldout_spam": 1280
+    },
+    {
+      "fold": 5,
+      "train_records": 15370,
+      "heldout_records": 3843,
+      "train_families": 6041,
+      "heldout_families": 1511,
+      "overlapping_families": 0,
+      "heldout_valid": 1280,
+      "heldout_suspicious": 1283,
+      "heldout_spam": 1280
+    }
+  ],
+  "cv": [
+    {
+      "model": "TF-IDF + Linear SVM",
+      "train_f1_mean": 1.0,
+      "cv_f1_mean": 1.0,
+      "cv_f1_sample_sd": 0.0,
+      "cv_accuracy_mean": 1.0,
+      "total_fit_seconds": 2.05
+    },
+    {
+      "model": "TF-IDF + Naive Bayes",
+      "train_f1_mean": 0.9924521487296273,
+      "cv_f1_mean": 0.9924523987130842,
+      "cv_f1_sample_sd": 0.0009709125998406728,
+      "cv_accuracy_mean": 0.992453202328701,
+      "total_fit_seconds": 3.06
+    }
+  ],
+  "validation": [
+    {
+      "model": "TF-IDF + Linear SVM",
+      "validation_n": 2399,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "misclassified": 0
+    },
+    {
+      "model": "TF-IDF + Naive Bayes",
+      "validation_n": 2399,
+      "accuracy": 0.992080033347228,
+      "macro_precision": 0.9922669922669923,
+      "macro_recall": 0.9920734251147266,
+      "macro_f1": 0.9920771428269667,
+      "misclassified": 19
+    }
+  ],
+  "length_only": {
+    "n": 2399,
+    "accuracy": 0.5493955814922884,
+    "macro_f1": 0.5371612347685245,
+    "confusion_matrix": [
+      [
+        223,
+        210,
+        367
+      ],
+      [
+        182,
+        558,
+        60
+      ],
+      [
+        201,
+        61,
+        537
+      ]
+    ]
+  },
+  "char_ngram_exploratory": {
+    "n": 2399,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "confusion_matrix": [
+      [
+        800,
+        0,
+        0
+      ],
+      [
+        0,
+        800,
+        0
+      ],
+      [
+        0,
+        0,
+        799
+      ]
+    ]
+  },
+  "dataset_did_not_touch_test": true,
+  "random_state": 20261026,
+  "protocol": "5 fold StratifiedGroupKFold over training only. Pipeline refits TF-IDF within fold; fixed validation partition used as diagnostics. No test data loaded for training or evaluation."
+}

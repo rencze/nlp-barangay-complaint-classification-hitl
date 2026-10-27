@@ -1,0 +1,14 @@
+{
+  "validation": {
+    "mean_nearest_cosine": 0.8800414507541469,
+    "median_nearest_cosine": 0.9117577060468591,
+    "fraction_at_least_0_9": 0.5752396832013339,
+    "threshold_note": "Descriptive unigram lexical similarity, not an adjudicated duplicate definition."
+  },
+  "test": {
+    "mean_nearest_cosine": 0.88318020761921,
+    "median_nearest_cosine": 0.9127519588520167,
+    "fraction_at_least_0_9": 0.5799832495812395,
+    "threshold_note": "Descriptive unigram lexical similarity, not an adjudicated duplicate definition."
+  }
+}

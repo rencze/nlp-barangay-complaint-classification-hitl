@@ -1,0 +1,7 @@
+model,classification,precision,recall,f1,support
+TF-IDF + Linear SVM,Valid,1.0,1.0,1.0,800
+TF-IDF + Linear SVM,Suspicious,1.0,1.0,1.0,800
+TF-IDF + Linear SVM,Spam,1.0,1.0,1.0,799
+TF-IDF + Naive Bayes,Valid,1.0,1.0,1.0,800
+TF-IDF + Naive Bayes,Suspicious,0.9768009768009768,1.0,0.9882643607164917,800
+TF-IDF + Naive Bayes,Spam,1.0,0.9762202753441802,0.9879670677644079,799

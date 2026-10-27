@@ -1,0 +1,73 @@
+{
+  "canonical_path": "data/Barangay_Complaint_Dataset_24000.csv",
+  "sha256": "35414af2dc63e2870928bd1853c557ed301dbdae80416a0bf37be00648d92e28",
+  "mirror_path": "manuscript/source/data/ALL_SYNTHETIC_V2.csv",
+  "mirror_sha256": "35414af2dc63e2870928bd1853c557ed301dbdae80416a0bf37be00648d92e28",
+  "record_level_comparison": "All 21 columns and record order identical, not only record counts",
+  "rows": 24000,
+  "columns": [
+    "record_id",
+    "complaint_text",
+    "classification",
+    "language_group",
+    "category_id",
+    "category",
+    "category_definition",
+    "complaint_topic",
+    "review_reason",
+    "spam_type",
+    "length_band_intended",
+    "scenario_family_id",
+    "template_family_id",
+    "source_reference_ids",
+    "generation_method",
+    "generation_seed",
+    "source_type",
+    "language_verified",
+    "human_label_reviewed",
+    "split",
+    "label_rule"
+  ],
+  "splits": {
+    "train": {
+      "n": 19213,
+      "all_columns_and_order_identical": true,
+      "mismatched_records": 0
+    },
+    "validation": {
+      "n": 2399,
+      "all_columns_and_order_identical": true,
+      "mismatched_records": 0
+    },
+    "test": {
+      "n": 2388,
+      "all_columns_and_order_identical": true,
+      "mismatched_records": 0
+    }
+  },
+  "scenario_group_overlaps": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "classes": {
+    "Suspicious": 8000,
+    "Spam": 8000,
+    "Valid": 8000
+  },
+  "assigned_languages": {
+    "Bisaya": 6000,
+    "Filipino": 6000,
+    "English": 6000,
+    "Mixed": 6000
+  },
+  "generation_categories": 118,
+  "changed_narratives": 0,
+  "changed_labels": 0,
+  "changed_languages": 0,
+  "changed_category_fields": 0,
+  "changed_family_identifiers": 0,
+  "changed_partitions": 0,
+  "additional_research_data_used": false,
+  "other_files_note": "Small demo/synthetic example files predate this final audit and are not part of the 24000-record study. No challenge or feedback data was added."
+}

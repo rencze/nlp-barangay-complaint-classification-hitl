@@ -1,0 +1,1 @@
+PASS: byte/record-level corpus integrity, 118 categories, stored configurations, model/prediction agreement, training-only IDF and paired metrics. No model fitted.

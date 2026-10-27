@@ -222,3 +222,23 @@ models/*
 !models/.gitkeep
 results/*
 !results/.gitkeep
+!results/figures/
+!results/figures/**
+!results/verified_20261026/
+!results/verified_20261026/**
+!results/final_audit_20261027/
+!results/final_audit_20261027/**
+
+# Local rendering/build artifacts; final delivery ZIPs are packaged separately.
+tmp/
+output/
+.venv-research/
+*.aux
+*.toc
+*.lof
+*.lot
+*.out
+*.synctex.gz
+manuscript/source/main.pdf
+manuscript/*compile*.txt
+manuscript/supplied_pdf_text.txt

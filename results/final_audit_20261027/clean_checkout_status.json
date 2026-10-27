@@ -1,0 +1,9 @@
+{
+  "pinned_requirements_installed": true,
+  "pip_check_passed": true,
+  "minimal_example_passed": true,
+  "read_only_evidence_check_passed": true,
+  "manuscript_preparation_without_training_passed": true,
+  "source": "Fresh extraction of corrected research ZIP; independent pinned venv",
+  "full_study_training_performed": false
+}

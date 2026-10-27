@@ -1,0 +1,24 @@
+{
+  "normalization": "Unicode NFKC + casefold + whitespace; no stopword removal, negation/accents retained",
+  "word_ngrams": [
+    1,
+    2
+  ],
+  "word_min_df": 2,
+  "word_max_df": 0.95,
+  "char_analyzer": "char_wb",
+  "char_ngrams": [
+    3,
+    5
+  ],
+  "char_min_df": 3,
+  "char_max_features": 45000,
+  "feature_weights": [
+    1,
+    1
+  ],
+  "C": 0.1,
+  "calibration": "sigmoid, ensemble=True, 3 precomputed scenario-grouped training folds",
+  "selection": "Single fixed candidate; development comparison only, no candidate test evaluation",
+  "seed": 20261026
+}

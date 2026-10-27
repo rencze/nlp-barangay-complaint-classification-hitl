@@ -1,0 +1,9 @@
+model,language_group,n,accuracy,macro_f1
+TF-IDF + LinearSVC,Bisaya,595,1.0,1.0
+TF-IDF + LinearSVC,Filipino,591,1.0,1.0
+TF-IDF + LinearSVC,English,603,1.0,1.0
+TF-IDF + LinearSVC,Mixed,599,1.0,1.0
+TF-IDF + MultinomialNB,Bisaya,595,0.989916,0.989841
+TF-IDF + MultinomialNB,Filipino,591,0.99154,0.991517
+TF-IDF + MultinomialNB,English,603,0.991708,0.991748
+TF-IDF + MultinomialNB,Mixed,599,0.993322,0.99335

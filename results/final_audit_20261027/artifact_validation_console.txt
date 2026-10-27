@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "nb/validation: prediction counts and independent metrics agree",
+    "nb/test: prediction counts and independent metrics agree",
+    "svm/validation: prediction counts and independent metrics agree",
+    "svm/test: prediction counts and independent metrics agree",
+    "candidate_uncalibrated/validation: prediction counts and independent metrics agree",
+    "candidate_calibrated/validation: prediction counts and independent metrics agree",
+    "candidate_calibrated_research_only.joblib: reload and inference passed",
+    "candidate_uncalibrated_research_only.joblib: reload and inference passed",
+    "nb_research_only.joblib: reload and inference passed",
+    "svm_research_only.joblib: reload and inference passed",
+    "All required figure trios exist; every PNG is at least 300 DPI",
+    "main.log: compilation success, no overflow or undefined references",
+    "evaluation_report.log: compilation success, no overflow or undefined references"
+  ],
+  "dataset_sha256": "35414af2dc63e2870928bd1853c557ed301dbdae80416a0bf37be00648d92e28",
+  "note": "Pixel layout inspected separately through rendered page contact sheets and full-size figures."
+}

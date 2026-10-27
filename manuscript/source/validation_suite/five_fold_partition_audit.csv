@@ -1,0 +1,6 @@
+fold,train_records,heldout_records,train_families,heldout_families,overlapping_families,heldout_valid,heldout_suspicious,heldout_spam
+1,15371,3842,6042,1510,0,1281,1281,1280
+2,15371,3842,6042,1510,0,1281,1281,1280
+3,15371,3842,6042,1510,0,1281,1281,1280
+4,15369,3844,6041,1511,0,1281,1283,1280
+5,15370,3843,6041,1511,0,1280,1283,1280

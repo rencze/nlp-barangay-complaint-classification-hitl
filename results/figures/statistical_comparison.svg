@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="547.56pt" height="565.00332pt" viewBox="0 0 547.56 565.00332" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-26T23:53:26.223336</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 565.00332 
+L 547.56 565.00332 
+L 547.56 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="table_1">
+    <g id="patch_2">
+     <path d="M 11.52 131.462903 
+L 263.2896 131.462903 
+L 263.2896 114.285484 
+L 11.52 114.285484 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_1">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="137.4048" y="126.251654" transform="rotate(-0 137.4048 126.251654)">Baseline / SVM</text>
+    </g>
+    <g id="patch_3">
+     <path d="M 263.2896 131.462903 
+L 399.6648 131.462903 
+L 399.6648 114.285484 
+L 263.2896 114.285484 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_2">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="331.4772" y="126.251147" transform="rotate(-0 331.4772 126.251147)">SVM correct</text>
+    </g>
+    <g id="patch_4">
+     <path d="M 399.6648 131.462903 
+L 536.04 131.462903 
+L 536.04 114.285484 
+L 399.6648 114.285484 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_3">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="467.8524" y="126.251147" transform="rotate(-0 467.8524 126.251147)">SVM wrong</text>
+    </g>
+    <g id="patch_5">
+     <path d="M 11.52 148.640323 
+L 263.2896 148.640323 
+L 263.2896 131.462903 
+L 11.52 131.462903 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_4">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="137.4048" y="143.428566" transform="rotate(-0 137.4048 143.428566)">Naive Bayes correct</text>
+    </g>
+    <g id="patch_6">
+     <path d="M 263.2896 148.640323 
+L 399.6648 148.640323 
+L 399.6648 131.462903 
+L 263.2896 131.462903 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_5">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="331.4772" y="143.428566" transform="rotate(-0 331.4772 143.428566)">2380</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 399.6648 148.640323 
+L 536.04 148.640323 
+L 536.04 131.462903 
+L 399.6648 131.462903 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="467.8524" y="143.428566" transform="rotate(-0 467.8524 143.428566)">0</text>
+    </g>
+    <g id="patch_8">
+     <path d="M 11.52 165.817742 
+L 263.2896 165.817742 
+L 263.2896 148.640323 
+L 11.52 148.640323 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="137.4048" y="160.605985" transform="rotate(-0 137.4048 160.605985)">Naive Bayes wrong</text>
+    </g>
+    <g id="patch_9">
+     <path d="M 263.2896 165.817742 
+L 399.6648 165.817742 
+L 399.6648 148.640323 
+L 263.2896 148.640323 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_8">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="331.4772" y="160.605985" transform="rotate(-0 331.4772 160.605985)">19</text>
+    </g>
+    <g id="patch_10">
+     <path d="M 399.6648 165.817742 
+L 536.04 165.817742 
+L 536.04 148.640323 
+L 399.6648 148.640323 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_9">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="467.8524" y="160.605985" transform="rotate(-0 467.8524 160.605985)">0</text>
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11px; font-family: 'DejaVu Serif'" transform="translate(137.414375 203.907533)">b = 0; c = 19; corrected chi-square = 17.052632</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Serif'" transform="translate(167.151328 217.110541)">Exact two-sided p = 3.814697266e-06</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 14px; font-family: 'DejaVu Serif'; text-anchor: middle" x="273.78" y="45.6" transform="rotate(-0 273.78 45.6)">Validation (N = 2,399)</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="table_2">
+    <g id="patch_11">
+     <path d="M 11.52 375.519677 
+L 263.2896 375.519677 
+L 263.2896 358.342258 
+L 11.52 358.342258 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_12">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="137.4048" y="370.308429" transform="rotate(-0 137.4048 370.308429)">Baseline / SVM</text>
+    </g>
+    <g id="patch_12">
+     <path d="M 263.2896 375.519677 
+L 399.6648 375.519677 
+L 399.6648 358.342258 
+L 263.2896 358.342258 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_13">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="331.4772" y="370.307921" transform="rotate(-0 331.4772 370.307921)">SVM correct</text>
+    </g>
+    <g id="patch_13">
+     <path d="M 399.6648 375.519677 
+L 536.04 375.519677 
+L 536.04 358.342258 
+L 399.6648 358.342258 
+z
+" style="fill: #e6e6e6; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_14">
+     <text style="font-weight: 700; font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="467.8524" y="370.307921" transform="rotate(-0 467.8524 370.307921)">SVM wrong</text>
+    </g>
+    <g id="patch_14">
+     <path d="M 11.52 392.697097 
+L 263.2896 392.697097 
+L 263.2896 375.519677 
+L 11.52 375.519677 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="137.4048" y="387.48534" transform="rotate(-0 137.4048 387.48534)">Naive Bayes correct</text>
+    </g>
+    <g id="patch_15">
+     <path d="M 263.2896 392.697097 
+L 399.6648 392.697097 
+L 399.6648 375.519677 
+L 263.2896 375.519677 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="331.4772" y="387.48534" transform="rotate(-0 331.4772 387.48534)">2368</text>
+    </g>
+    <g id="patch_16">
+     <path d="M 399.6648 392.697097 
+L 536.04 392.697097 
+L 536.04 375.519677 
+L 399.6648 375.519677 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_17">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="467.8524" y="387.48534" transform="rotate(-0 467.8524 387.48534)">0</text>
+    </g>
+    <g id="patch_17">
+     <path d="M 11.52 409.874516 
+L 263.2896 409.874516 
+L 263.2896 392.697097 
+L 11.52 392.697097 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_18">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="137.4048" y="404.66276" transform="rotate(-0 137.4048 404.66276)">Naive Bayes wrong</text>
+    </g>
+    <g id="patch_18">
+     <path d="M 263.2896 409.874516 
+L 399.6648 409.874516 
+L 399.6648 392.697097 
+L 263.2896 392.697097 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_19">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="331.4772" y="404.66276" transform="rotate(-0 331.4772 404.66276)">20</text>
+    </g>
+    <g id="patch_19">
+     <path d="M 399.6648 409.874516 
+L 536.04 409.874516 
+L 536.04 392.697097 
+L 399.6648 392.697097 
+z
+" style="fill: #ffffff; stroke: #9b9b9b; stroke-width: 0.5; stroke-linejoin: miter"/>
+    </g>
+    <g id="text_20">
+     <text style="font-size: 13px; font-family: 'DejaVu Serif'; text-anchor: middle" x="467.8524" y="404.66276" transform="rotate(-0 467.8524 404.66276)">0</text>
+    </g>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 11px; font-family: 'DejaVu Serif'" transform="translate(137.414375 447.964308)">b = 0; c = 20; corrected chi-square = 18.050000</text>
+    <text style="font-size: 11px; font-family: 'DejaVu Serif'" transform="translate(167.151328 461.167315)">Exact two-sided p = 1.907348633e-06</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 14px; font-family: 'DejaVu Serif'; text-anchor: middle" x="273.78" y="289.656774" transform="rotate(-0 273.78 289.656774)">Previously evaluated synthetic test (N = 2,388)</text>
+   </g>
+  </g>
+  <g id="text_23">
+   <text style="font-size: 14px; font-family: 'DejaVu Serif'; text-anchor: middle" x="265.32" y="22.157812" transform="rotate(-0 265.32 22.157812)">Paired McNemar comparison from record-level predictions</text>
+  </g>
+  <g id="text_24">
+   <text style="font-size: 10px; font-family: 'DejaVu Serif'" transform="translate(114.224688 526.030781)">Nominal p &lt; 0.05 favors SVM on this synthetic benchmark.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Serif'" transform="translate(27.852813 538.033516)">Shared generator/family dependence limits inference; this is not evidence of field superiority.</text>
+   <text style="font-size: 10px; font-family: 'DejaVu Serif'" transform="translate(71.229375 550.08)">Corrected statistic: max(0, |b-c|-1)^2 / (b+c); exact test: Binomial(b+c, 0.5).</text>
+  </g>
+ </g>
+</svg>

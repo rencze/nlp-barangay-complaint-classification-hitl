@@ -1,0 +1,3 @@
+model,train_f1_mean,cv_f1_mean,cv_f1_sample_sd,cv_accuracy_mean,total_fit_seconds
+TF-IDF + Linear SVM,1.0,1.0,0.0,1.0,2.05
+TF-IDF + Naive Bayes,0.9924521487296273,0.9924523987130842,0.0009709125998406728,0.992453202328701,3.06

@@ -1,0 +1,525 @@
+{
+  "data_rows": {
+    "train": 19213,
+    "validation": 2399,
+    "test": 2388
+  },
+  "hyperparameter_grid": [
+    {
+      "ngram": "(1, 1)",
+      "min_df": 2,
+      "C": 0.1,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 2,
+      "C": 0.1,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 5,
+      "C": 0.1,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 5,
+      "C": 0.1,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 10,
+      "C": 0.1,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 10,
+      "C": 0.1,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 2,
+      "C": 1.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 2,
+      "C": 1.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 5,
+      "C": 1.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 5,
+      "C": 1.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 10,
+      "C": 1.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 10,
+      "C": 1.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 2,
+      "C": 10.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 2,
+      "C": 10.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 5,
+      "C": 10.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 5,
+      "C": 10.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 1)",
+      "min_df": 10,
+      "C": 10.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    },
+    {
+      "ngram": "(1, 2)",
+      "min_df": 10,
+      "C": 10.0,
+      "cv_mean_macro_f1": 1.0,
+      "cv_sd_macro_f1": 0.0,
+      "cv_mean_train_macro_f1": 1.0
+    }
+  ],
+  "chosen_params": {
+    "svm__C": "0.1",
+    "tfidf__min_df": "2",
+    "tfidf__ngram_range": "(1, 1)"
+  },
+  "best_cv_macro_f1": 1.0,
+  "naive_bayes": {
+    "validation": {
+      "n": 2399,
+      "accuracy": 0.99208,
+      "macro_f1": 0.992077,
+      "weighted_f1": 0.992079,
+      "precision_macro": 0.992267,
+      "recall_macro": 0.992073,
+      "confusion_matrix": [
+        [
+          800,
+          0,
+          0
+        ],
+        [
+          0,
+          800,
+          0
+        ],
+        [
+          0,
+          19,
+          780
+        ]
+      ],
+      "per_class": {
+        "Valid": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Suspicious": {
+          "precision": 0.976801,
+          "recall": 1.0,
+          "f1": 0.988264
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 0.97622,
+          "f1": 0.987967
+        }
+      }
+    },
+    "test": {
+      "n": 2388,
+      "accuracy": 0.991625,
+      "macro_f1": 0.991624,
+      "weighted_f1": 0.991624,
+      "precision_macro": 0.99178,
+      "recall_macro": 0.991677,
+      "confusion_matrix": [
+        [
+          796,
+          0,
+          0
+        ],
+        [
+          0,
+          791,
+          0
+        ],
+        [
+          0,
+          20,
+          781
+        ]
+      ],
+      "per_class": {
+        "Valid": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Suspicious": {
+          "precision": 0.975339,
+          "recall": 1.0,
+          "f1": 0.987516
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 0.975031,
+          "f1": 0.987358
+        }
+      }
+    }
+  },
+  "svm": {
+    "validation": {
+      "n": 2399,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "confusion_matrix": [
+        [
+          800,
+          0,
+          0
+        ],
+        [
+          0,
+          800,
+          0
+        ],
+        [
+          0,
+          0,
+          799
+        ]
+      ],
+      "per_class": {
+        "Valid": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Suspicious": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "test": {
+      "n": 2388,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "confusion_matrix": [
+        [
+          796,
+          0,
+          0
+        ],
+        [
+          0,
+          791,
+          0
+        ],
+        [
+          0,
+          0,
+          801
+        ]
+      ],
+      "per_class": {
+        "Valid": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Suspicious": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "Spam": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    }
+  },
+  "length_only_baseline_test": {
+    "n": 2388,
+    "accuracy": 0.555276,
+    "macro_f1": 0.542697,
+    "weighted_f1": 0.542573,
+    "precision_macro": 0.538557,
+    "recall_macro": 0.555344,
+    "confusion_matrix": [
+      [
+        235,
+        223,
+        338
+      ],
+      [
+        168,
+        555,
+        68
+      ],
+      [
+        187,
+        78,
+        536
+      ]
+    ],
+    "per_class": {
+      "Valid": {
+        "precision": 0.398305,
+        "recall": 0.295226,
+        "f1": 0.339105
+      },
+      "Suspicious": {
+        "precision": 0.648364,
+        "recall": 0.701643,
+        "f1": 0.673953
+      },
+      "Spam": {
+        "precision": 0.569002,
+        "recall": 0.669164,
+        "f1": 0.615032
+      }
+    }
+  },
+  "eda": [
+    {
+      "class": "Valid",
+      "n": 8000,
+      "mean_words": 20.76,
+      "median_words": 20.0,
+      "mean_chars": 127.37,
+      "min_words": 5,
+      "max_words": 48
+    },
+    {
+      "class": "Suspicious",
+      "n": 8000,
+      "mean_words": 29.78,
+      "median_words": 28.0,
+      "mean_chars": 169.04,
+      "min_words": 8,
+      "max_words": 66
+    },
+    {
+      "class": "Spam",
+      "n": 8000,
+      "mean_words": 14.9,
+      "median_words": 15.0,
+      "mean_chars": 91.26,
+      "min_words": 1,
+      "max_words": 35
+    }
+  ],
+  "lexical_similarity": {
+    "mean_nearest_train_tfidf_cosine": 0.88318,
+    "median_nearest_train_tfidf_cosine": 0.91275,
+    "fraction_over_0_9": 0.57998
+  },
+  "prior_48_reused_diagnostic_not_blind": {},
+  "sgd_loss_start_end": {
+    "start": {
+      "epoch": 1,
+      "training_hinge_loss": 0.272574,
+      "validation_hinge_loss": 0.300816,
+      "validation_macro_f1": 0.962434
+    },
+    "end": {
+      "epoch": 15,
+      "training_hinge_loss": 0.009421,
+      "validation_hinge_loss": 0.012279,
+      "validation_macro_f1": 0.992077
+    }
+  },
+  "learning_curve": [
+    {
+      "fraction": 0.1,
+      "train_n": 1921,
+      "training_macro_f1": 1.0,
+      "validation_macro_f1": 0.998749
+    },
+    {
+      "fraction": 0.2,
+      "train_n": 3842,
+      "training_macro_f1": 0.999743,
+      "validation_macro_f1": 1.0
+    },
+    {
+      "fraction": 0.35,
+      "train_n": 6724,
+      "training_macro_f1": 1.0,
+      "validation_macro_f1": 1.0
+    },
+    {
+      "fraction": 0.5,
+      "train_n": 9606,
+      "training_macro_f1": 1.0,
+      "validation_macro_f1": 1.0
+    },
+    {
+      "fraction": 0.75,
+      "train_n": 14409,
+      "training_macro_f1": 1.0,
+      "validation_macro_f1": 1.0
+    },
+    {
+      "fraction": 1.0,
+      "train_n": 19213,
+      "training_macro_f1": 1.0,
+      "validation_macro_f1": 1.0
+    }
+  ],
+  "language_subgroups": [
+    {
+      "model": "TF-IDF + LinearSVC",
+      "language_group": "Bisaya",
+      "n": 595,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "model": "TF-IDF + LinearSVC",
+      "language_group": "Filipino",
+      "n": 591,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "model": "TF-IDF + LinearSVC",
+      "language_group": "English",
+      "n": 603,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "model": "TF-IDF + LinearSVC",
+      "language_group": "Mixed",
+      "n": 599,
+      "accuracy": 1.0,
+      "macro_f1": 1.0
+    },
+    {
+      "model": "TF-IDF + MultinomialNB",
+      "language_group": "Bisaya",
+      "n": 595,
+      "accuracy": 0.989916,
+      "macro_f1": 0.989841
+    },
+    {
+      "model": "TF-IDF + MultinomialNB",
+      "language_group": "Filipino",
+      "n": 591,
+      "accuracy": 0.99154,
+      "macro_f1": 0.991517
+    },
+    {
+      "model": "TF-IDF + MultinomialNB",
+      "language_group": "English",
+      "n": 603,
+      "accuracy": 0.991708,
+      "macro_f1": 0.991748
+    },
+    {
+      "model": "TF-IDF + MultinomialNB",
+      "language_group": "Mixed",
+      "n": 599,
+      "accuracy": 0.993322,
+      "macro_f1": 0.99335
+    }
+  ],
+  "notes": [
+    "All 24,000 records generated from researcher-authored micro-scenarios with rule-driven transformations; not human reviewed.",
+    "No real-world generalization claim; prior 48 probes have been inspected before and are not blind.",
+    "TF-IDF features fitted only in training/folds.",
+    "The SGD curve is not the LinearSVC internal loss trace.",
+    "Frozen generated test reused only for one result report and further generator tuning should be done with a new blind set."
+  ]
+}

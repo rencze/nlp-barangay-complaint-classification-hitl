@@ -1,0 +1,142 @@
+\chapter{Results and Discussion}
+\section{Experimental Scope and Documentation}
+This chapter presents the original recorded research on the fixed 24,000-narrative synthetic corpus: group-aware SVM selection, a Naive Bayes pipeline baseline, separate five-fold stability analysis, validation and synthetic testing. Subsequent reproducibility verification corroborated the principal recorded metrics and is documented in Section~\ref{sec:verification-history}; repeated execution is not a new independent experiment or dataset. Actual record-level prediction evidence supports the figures, tables and paired comparison. The separately evaluated word--character and calibrated candidates are development-validation diagnostics and are distinguished from the original reference SVM. No authentic-data generalization, operational HITL improvement or application deployment is claimed.
+
+\section{Dataset Integrity and Similarity Diagnostics}
+The unchanged corpus contains 8,000 examples per class and 6,000 per assigned language group. Recorded partitions remain 19,213 training, 2,399 validation and 2,388 previously evaluated synthetic test records. Raw and Unicode-normalized exact duplicate excess are both zero. Record IDs are unique, and scenario-family, template-family and normalized-text overlaps between stored partitions are zero. These checks establish identifier and exact-text separation, not independent linguistic construction.
+A training-fitted reference unigram TF--IDF similarity diagnostic found nearest-training cosine similarity of at least 0.90 for 57.52\% of validation narratives and 58.00\% of test narratives. Median similarities were 0.911758 and 0.912752, respectively. This descriptive lexical threshold does not adjudicate duplicates. Shared phrases and class-conditional generator rules remain plausible explanations of ceiling scores. All language and human-label review flags remain negative.
+
+\section{Hyperparameter Search and Grouped Cross-Validation}
+Figure~\ref{fig:verified-grid} presents all 18 recorded SVM configurations using training-only three-fold grouped Macro-F1. Every configuration scored 1.000000 with zero recorded fold dispersion; deterministic tie handling selected $C=0.1$, word unigrams and minimum document frequency 2. The uniform grid cannot demonstrate that any parameter choice is intrinsically superior.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.69\textheight,keepaspectratio]{figures/verified/hyperparameter_tuning_results.pdf}
+\caption{Three-fold grouped hyperparameter search over all 18 SVM configurations. Recorded values are supported by preserved outputs and reproducibility verification.}\label{fig:verified-grid}
+\end{figure}
+
+The separate five-fold stability analysis refitted the complete vectorizer/classifier pipeline within each training fold. It excluded the fixed validation and historical test records and verified zero scenario-family overlap within all folds. Figure~\ref{fig:verified-cv} reports fold values and aggregate sample standard deviations. SVM mean Macro-F1 was 1.000000 (SD 0.000000), while Naive Bayes mean Macro-F1 was 0.992452 (sample SD 0.000971). This dispersion is descriptive and is not a population confidence interval or an independent nested model-selection estimate.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.72\textheight,keepaspectratio]{figures/verified/cross_validation_results.pdf}
+\caption{Five-fold scenario-grouped training-only cross-validation, including fold-level values, means and sample standard deviations.}\label{fig:verified-cv}
+\end{figure}
+
+\section{Fixed Development Validation}
+The same two frozen reference pipelines were evaluated on 2,399 validation narratives. Linear SVM achieved 1.000000 Macro-F1 with 0 errors; Naive Bayes achieved 0.992077 Macro-F1 with 19 errors. Figure~\ref{fig:verified-validation-summary} gives accuracy, macro-precision, macro-recall, Macro-F1, Weighted-F1 and record counts. The validation partition is an existing development benchmark.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.44\textheight,keepaspectratio]{figures/verified/validation_performance.pdf}
+\caption{Fixed Development Validation summary supported by the original results and verified reference predictions. Precision and recall are macro-averaged.}\label{fig:verified-validation-summary}
+\end{figure}
+
+No errors occurred in the reference SVM on this within-generator partition. Figure~\ref{fig:verified-svm-validation-cm} gives the actual counts, with reference labels on rows and predictions on columns.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.78\textwidth,height=.52\textheight,keepaspectratio]{figures/verified/svm_validation_confusion_matrix.pdf}
+\caption{Linear SVM confusion matrix on the fixed development validation partition. Entries are narrative counts.}\label{fig:verified-svm-validation-cm}
+\end{figure}
+
+All 19 Naive Bayes errors were reference Spam narratives predicted as Suspicious. Figure~\ref{fig:verified-nb-validation-cm} gives the actual counts, with reference labels on rows and predictions on columns.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.78\textwidth,height=.52\textheight,keepaspectratio]{figures/verified/naive_bayes_validation_confusion_matrix.pdf}
+\caption{Naive Bayes confusion matrix on the fixed development validation partition. Entries are narrative counts.}\label{fig:verified-nb-validation-cm}
+\end{figure}
+\begin{table}[H]\centering\small\caption{Per-class metrics on the fixed development validation partition}\label{tab:verified-validation-classes}\begin{tabular}{llrrrr}\toprule
+Pipeline & Class & Precision & Recall & F1 & Support\\\midrule
+SVM & Valid & 1.000000 & 1.000000 & 1.000000 & 800 \\
+SVM & Suspicious & 1.000000 & 1.000000 & 1.000000 & 800 \\
+SVM & Spam & 1.000000 & 1.000000 & 1.000000 & 799 \\
+Naive Bayes & Valid & 1.000000 & 1.000000 & 1.000000 & 800 \\
+Naive Bayes & Suspicious & 0.976801 & 1.000000 & 0.988264 & 800 \\
+Naive Bayes & Spam & 1.000000 & 0.976220 & 0.987967 & 799 \\
+\bottomrule\end{tabular}\end{table}
+
+\section{Previously Evaluated Synthetic Test}
+The same two frozen reference pipelines were evaluated on 2,388 historically evaluated synthetic test narratives. Linear SVM achieved 1.000000 Macro-F1 with 0 errors; Naive Bayes achieved 0.991624 Macro-F1 with 20 errors. Figure~\ref{fig:verified-test-summary} gives accuracy, macro-precision, macro-recall, Macro-F1, Weighted-F1 and record counts. These synthetic test results concern the original, already inspected test partition; subsequent verification does not make it an independent new test. It was not used for candidate feature or calibration selection.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.44\textheight,keepaspectratio]{figures/verified/testing_performance.pdf}
+\caption{Previously Evaluated Synthetic Test summary supported by the original results and verified reference predictions. Precision and recall are macro-averaged.}\label{fig:verified-test-summary}
+\end{figure}
+
+No errors occurred in the reference SVM on this within-generator partition. Figure~\ref{fig:verified-svm-test-cm} gives the actual counts, with reference labels on rows and predictions on columns.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.78\textwidth,height=.52\textheight,keepaspectratio]{figures/verified/svm_testing_confusion_matrix.pdf}
+\caption{Linear SVM confusion matrix on the previously evaluated synthetic test partition. Entries are narrative counts.}\label{fig:verified-svm-test-cm}
+\end{figure}
+
+All 20 Naive Bayes errors were reference Spam narratives predicted as Suspicious. Figure~\ref{fig:verified-nb-test-cm} gives the actual counts, with reference labels on rows and predictions on columns.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.78\textwidth,height=.52\textheight,keepaspectratio]{figures/verified/naive_bayes_testing_confusion_matrix.pdf}
+\caption{Naive Bayes confusion matrix on the previously evaluated synthetic test partition. Entries are narrative counts.}\label{fig:verified-nb-test-cm}
+\end{figure}
+\begin{table}[H]\centering\small\caption{Per-class metrics on the previously evaluated synthetic test partition}\label{tab:verified-test-classes}\begin{tabular}{llrrrr}\toprule
+Pipeline & Class & Precision & Recall & F1 & Support\\\midrule
+SVM & Valid & 1.000000 & 1.000000 & 1.000000 & 796 \\
+SVM & Suspicious & 1.000000 & 1.000000 & 1.000000 & 791 \\
+SVM & Spam & 1.000000 & 1.000000 & 1.000000 & 801 \\
+Naive Bayes & Valid & 1.000000 & 1.000000 & 1.000000 & 796 \\
+Naive Bayes & Suspicious & 0.975339 & 1.000000 & 0.987516 & 791 \\
+Naive Bayes & Spam & 1.000000 & 0.975031 & 0.987358 & 801 \\
+\bottomrule\end{tabular}\end{table}
+
+\section{Reference Pipeline Comparison}
+Figure~\ref{fig:verified-comparison} compares both reference pipelines across all five aggregate metrics and both partitions. Its full 0--1 axis prevents a visually exaggerated difference near the score ceiling. Hatching and distinct labels preserve readability in grayscale. The selected SVM uses word unigrams while the Naive Bayes baseline uses unigrams/bigrams; this is a comparison of complete pipelines, not a controlled isolation of estimator choice.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.69\textheight,keepaspectratio]{figures/verified/model_performance_comparison.pdf}
+\caption{Reference SVM and Naive Bayes comparison on fixed validation and the previously evaluated synthetic test.}\label{fig:verified-comparison}
+\end{figure}
+
+\section{Paired Statistical Comparison}
+The reference predictions were exported with record identifiers and aligned by identifier and reference label before computing McNemar's test. Figure~\ref{fig:verified-mcnemar} presents both contingency tables, continuity-corrected statistics and exact two-sided binomial p-values. Validation has $b=0,c=19$, corrected $\chi^2=17.052632$ and $p=3.814697266\times10^{-6}$. The synthetic test comparison has $b=0,c=20$, corrected $\chi^2=18.05$ and $p=1.907348633\times10^{-6}$.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.90\textwidth,height=.70\textheight,keepaspectratio]{figures/verified/statistical_comparison.pdf}
+\caption{Paired McNemar analysis computed from actual per-record reference predictions on both existing partitions.}\label{fig:verified-mcnemar}
+\end{figure}
+
+Both nominal p-values are below 0.05 and favor the SVM's error incidence on this synthetic benchmark. This is not proof of field superiority, an effect of HITL, or equivalence of the underlying feature representations. Generated narratives share families and construction rules, which limits the independent-pair assumption and may make nominal p-values anticonservative. No probability of successful real-world complaint resolution follows from these tests.
+
+\section{Assigned-Language Performance}
+Language groups are generator metadata, not classifier inputs or independently verified language labels. Figure~\ref{fig:verified-languages} reports validation subgroup support and Macro-F1. Each SVM subgroup reaches the same ceiling while baseline errors vary. These findings cannot establish linguistic fairness or transfer to naturally authored code-switching.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.48\textheight,keepaspectratio]{figures/verified/language_group_validation.pdf}
+\caption{Validation performance by assigned language group; group supports are shown explicitly.}\label{fig:verified-languages}
+\end{figure}
+\begin{table}[H]\centering\small\caption{Previously evaluated synthetic test by assigned language group}\begin{tabular}{lrrr}\toprule Language & N & SVM Macro-F1 & NB Macro-F1\\\midrule
+Bisaya & 595 & 1.000000 & 0.989841 \\
+Filipino & 591 & 1.000000 & 0.991517 \\
+English & 603 & 1.000000 & 0.991748 \\
+Mixed & 599 & 1.000000 & 0.993350 \\
+\bottomrule\end{tabular}\end{table}
+\section{Learning and Shortcut Diagnostics}
+The original training-size procedure used the recorded fixed fractions. Validation Macro-F1 was 0.998749 at 1,921 training records and reached 1.000000 from the 20\% fraction onward (Figure~\ref{fig:verified-learning}). Early saturation is consistent with easily learned generator patterns and does not establish sample sufficiency for authentic reports.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.45\textheight,keepaspectratio]{figures/verified/svm_learning_curve.pdf}
+\caption{SVM training-size learning curve; sample count is not an optimizer epoch.}\label{fig:verified-learning}
+\end{figure}
+A separate SGD hinge-loss classifier supplies the epoch diagnostic in Figure~\ref{fig:verified-loss}; it is not the selected LinearSVC optimizer. Training hinge loss changed from 0.272574 to 0.009421, and validation loss from 0.300816 to 0.012279 over 15 passes. A decreasing auxiliary loss does not rule out generator-specific overfitting.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.45\textheight,keepaspectratio]{figures/verified/auxiliary_sgd_loss.pdf}
+\caption{Measured auxiliary SGD training/validation hinge loss, explicitly separate from the final LinearSVC estimator.}\label{fig:verified-loss}
+\end{figure}
+The two-feature length-only baseline achieved 0.549396 validation accuracy and 0.537161 Macro-F1. This above-chance diagnostic confirms that narrative length carries class information. A separate character-only diagnostic also reached the synthetic validation ceiling. These are diagnostics, not evidence of semantic understanding. No independent challenge dataset was executed: the archived 96-message challenge results remain historical, while the optional prior 48-message input expected by the original script was absent.
+
+\section{Separately Evaluated Combined-Feature Candidate}
+In a separate development evaluation, one fixed candidate combined word unigrams/bigrams with character-within-word 3--5-grams, using conservative normalization and $C=0.1$. A second version used sigmoid calibration through three scenario-grouped training folds. Both candidates were evaluated only on the 2,399 existing validation records; neither was run on the historical test. Figure~\ref{fig:verified-candidate} separates their development results from the reference measurements.
+
+\begin{figure}[H]\centering
+\includegraphics[width=.96\textwidth,height=.40\textheight,keepaspectratio]{figures/verified/candidate_validation_results.pdf}
+\caption{Separately executed word-plus-character candidates, with and without grouped sigmoid calibration; development validation only.}\label{fig:verified-candidate}
+\end{figure}
+Both candidates achieved 1.000000 validation Macro-F1 and zero errors, tying the word reference; therefore no classification improvement was demonstrated. The calibrated candidate yielded log loss 0.00079512, multiclass Brier sum 0.00000267, and ten-bin expected calibration error 0.00079433. These probability diagnostics are measured on the same synthetic development distribution and do not certify operational reliability. Candidate calibration is now an executed research component; probability-based live decisions and field calibration validation remain proposed.
+
+\section{Interpretation and Limits}
+The recorded metrics are supported by preserved data, group-aware feature fitting and subsequent reproducibility checks. Perfect SVM scores must be reported faithfully, but their credibility is bounded by synthetic, unreviewed labels, repeated construction patterns, high nearest-training similarity and an already inspected test set. No new authentic data, annotation agreement study, prospective feedback trial, web-system acceptance test or complaint-resolution effectiveness study was conducted. Next steps are independent annotation and external validation, followed by the separately specified application, HITL, privacy, case-management and model-release tests.

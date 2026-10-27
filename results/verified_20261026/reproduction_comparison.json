@@ -1,0 +1,29 @@
+{
+  "chosen_params": {
+    "matches_historical_at_original_precision": true
+  },
+  "best_cv_macro_f1": {
+    "matches_historical_at_original_precision": true
+  },
+  "svm": {
+    "matches_historical_at_original_precision": true
+  },
+  "naive_bayes": {
+    "matches_historical_at_original_precision": true
+  },
+  "length_only_baseline_test": {
+    "matches_historical_at_original_precision": true
+  },
+  "lexical_similarity": {
+    "matches_historical_at_original_precision": true
+  },
+  "sgd_loss_start_end": {
+    "matches_historical_at_original_precision": true
+  },
+  "learning_curve": {
+    "matches_historical_at_original_precision": true
+  },
+  "fivefold_metrics": {
+    "matches_historical_within_1e_12": true
+  }
+}

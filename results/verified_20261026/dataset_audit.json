@@ -1,0 +1,98 @@
+{
+  "sha256": "35414af2dc63e2870928bd1853c557ed301dbdae80416a0bf37be00648d92e28",
+  "records": 24000,
+  "columns": [
+    "record_id",
+    "complaint_text",
+    "classification",
+    "language_group",
+    "category_id",
+    "category",
+    "category_definition",
+    "complaint_topic",
+    "review_reason",
+    "spam_type",
+    "length_band_intended",
+    "scenario_family_id",
+    "template_family_id",
+    "source_reference_ids",
+    "generation_method",
+    "generation_seed",
+    "source_type",
+    "language_verified",
+    "human_label_reviewed",
+    "split",
+    "label_rule"
+  ],
+  "class_counts": {
+    "Suspicious": 8000,
+    "Spam": 8000,
+    "Valid": 8000
+  },
+  "assigned_languages": {
+    "Bisaya": 6000,
+    "Filipino": 6000,
+    "English": 6000,
+    "Mixed": 6000
+  },
+  "partition_counts": {
+    "train": 19213,
+    "validation": 2399,
+    "test": 2388
+  },
+  "partition_class_counts": {
+    "train": {
+      "Spam": 6400,
+      "Valid": 6404,
+      "Suspicious": 6409
+    },
+    "validation": {
+      "Suspicious": 800,
+      "Valid": 800,
+      "Spam": 799
+    },
+    "test": {
+      "Spam": 801,
+      "Valid": 796,
+      "Suspicious": 791
+    }
+  },
+  "scenario_groups": {
+    "train": 7552,
+    "validation": 944,
+    "test": 944
+  },
+  "cross_split_group_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "exact_duplicate_excess": 0,
+  "normalized_duplicate_excess": 0,
+  "cross_split_normalized_text_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "archived_partition_record_and_order_equivalence": {
+    "train": true,
+    "validation": true,
+    "test": true
+  },
+  "template_family_overlap": {
+    "train_validation": 0,
+    "train_test": 0,
+    "validation_test": 0
+  },
+  "review_flags": {
+    "source_type": {
+      "synthetic_researcher_constructed_unreviewed": 24000
+    },
+    "language_verified": {
+      "No": 24000
+    },
+    "human_label_reviewed": {
+      "No": 24000
+    }
+  }
+}

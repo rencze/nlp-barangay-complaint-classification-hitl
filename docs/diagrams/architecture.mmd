@@ -1,0 +1,20 @@
+flowchart TB
+  R[Authenticated resident] --> W[Next.js + TypeScript interface]
+  S[Authorized barangay staff] --> W
+  W -->|REST over HTTPS / secure session| A[FastAPI modular monolith]
+  A --> DB[(PostgreSQL: separate narratives, labels, decisions and cases)]
+  A --> I[Saved TF-IDF + Linear SVM inference]
+  M[Approved immutable model registry] --> I
+  I --> P{Predicted text label}
+  P -->|Valid| C[Policy-based Accepted disposition + Unresolved case]
+  P -->|Suspicious or Spam| H[Administrator review]
+  H -->|Accept| C
+  H --> Q[Clarification or reasoned rejection]
+  Q -->|Revised narrative| I
+  C --> K[Assigned case processing and verified resolution]
+  A --> U[Urgency flag and human safety lane independent of prediction]
+  DB --> J[Worker: outbox, notices, overdue alerts and quality audits]
+  H --> F[Quality-screened version-specific verified feedback]
+  F --> T[Authorized offline training and evaluation]
+  T --> G[Approval gate and rollback check]
+  G --> M

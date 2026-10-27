@@ -1,0 +1,14 @@
+digraph ML {
+ graph [rankdir=TB,bgcolor="white",pad="0.3",ranksep="0.33",nodesep="0.22",splines=ortho,fontname="DejaVu Sans"];
+ node [shape=box,style="rounded,filled",fontname="DejaVu Sans",fontsize=13,margin="0.22,0.14",color="#30495f",fillcolor="#ecf3f9",penwidth=1.3,width=5.8];
+ edge [color="#445b70",penwidth=1.3,arrowsize=.7];
+ a [label="Controlled dataset · 24,000 texts\n3 classes · 4 assigned languages · 118 scenario types"];
+ b [label="Data integrity and scenario-family audit\nExclude labels / metadata from predictive features"];
+ c [label="Group-aware dataset partition\nTrain 19,213 · Validation 2,399 · Test 2,388"];
+ d [label="Training partition only\n3-fold hyperparameter selection + 5-fold diagnostics",fillcolor="#e2f1e6"];
+ e [label="Within each fold: fit TF-IDF on fold-training text\nTrain SVM / NB · Score held-out fold"];
+ f [label="Select candidate and fit on full training partition"];
+ g [label="Assess fixed validation partition\nMacro-F1, confusion, languages, learning / loss diagnostics",fillcolor="#fff1df"];
+ h [label="Independent test remains separate\nNo tuning or frequency estimation from test",fillcolor="#f4e4e4"];
+ a->b->c->d->e->f->g->h;
+ }

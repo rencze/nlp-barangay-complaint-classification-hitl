@@ -1,0 +1,14 @@
+digraph NLP {
+ graph [rankdir=TB, bgcolor="white", pad="0.38", nodesep="0.24", ranksep="0.41", splines=ortho, fontname="DejaVu Sans", fontsize=16];
+ node [shape=box, style="rounded,filled", color="#2a4161", fillcolor="#eef4fa", fontname="DejaVu Sans", fontsize=14, margin="0.22,0.15", penwidth=1.2, width=5.7];
+ edge [color="#385979", penwidth=1.4, arrowsize=.65];
+ A [label="1  Complaint narrative\nCebuano / Filipino / English / mixed",fillcolor="#e4eef7"];
+ B [label="2  Basic input checks\nMissing text, encoding and whitespace"];
+ C [label="3  Conservative text normalization\nLowercase / Unicode / spacing; preserve negation"];
+ D [label="4  Tokenize and construct word n-grams\nUnigrams or unigrams + bigrams"];
+ E [label="5  TF-IDF vector representation\nVocabulary fitted on training data only", fillcolor="#e1f3ed"];
+ F [label="6  Supervised linear classifier\nLinear SVM (primary) / Naive Bayes (baseline)"];
+ G [label="7  Provisional text classification\nVALID   |   SUSPICIOUS   |   SPAM",fillcolor="#e9edf9"];
+ H [label="8  Administrator verifies / corrects\nCorrection retained for governed offline review",fillcolor="#fff5e7"];
+ A->B->C->D->E->F->G->H;
+ }

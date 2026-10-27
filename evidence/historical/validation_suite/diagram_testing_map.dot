@@ -1,0 +1,10 @@
+digraph Tests {
+ graph [rankdir=TB, bgcolor="white", pad="0.16", ranksep="0.36", nodesep=".28", fontsize=18, labelloc=t, label="Evaluation experiments: what each test establishes"];
+ node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=12, fillcolor="#EEF5FA", color="#6C8494", margin="0.19,0.12"];
+ edge [color="#537389", penwidth=1.25, arrowsize=.55];
+ root [label="RESEARCH QUESTION\nCan TF-IDF text models classify three submission types\nwithout relying solely on superficial generator artifacts?", fillcolor="#E3EDF5"];
+ {rank=same; a [label="HYPERPARAMETER GRID\n18 settings + group CV\nParameter sensitivity"]; b [label="FIVE-FOLD GROUP CV\nSVM and NB per fold\nStability across partitions"]; c [label="FIXED VALIDATION\nMacro-F1 + confusion matrix\nClass discrimination"]}
+ {rank=same; d [label="LEARNING CURVES\nTrain vs validation by sample size\nData sufficiency signals"]; e [label="SGD LOSS HISTORY\nTraining vs validation by epoch\nOptimization diagnostic only"]; f [label="ABLATION + SUBGROUPS\nLength only | character n-grams\nBisaya | Filipino | English | Mixed"]}
+ caution [label="INTERPRET WITH CAUTION\nEven grouped scores can be overly optimistic if\nall folds share class-specific generator phrasing.", fillcolor="#FFF2E2"];
+ root->a;root->b;root->c;a->d;b->e;c->f;d->caution;e->caution;f->caution;
+}

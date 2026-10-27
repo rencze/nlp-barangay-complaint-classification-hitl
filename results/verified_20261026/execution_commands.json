@@ -1,0 +1,9 @@
+{
+  "original": "python -u manuscript/source/reproducibility_scripts/evaluate_models.py",
+  "grouped_validation": "python -u manuscript/source/validation_suite/run_grouped_validation.py",
+  "supplement": "python -u src/research_validation.py --mode all",
+  "figures": "python src/make_research_figures.py",
+  "diagrams": "python src/make_system_diagrams.py",
+  "manuscript": "python src/prepare_manuscript.py",
+  "verification": "python src/validate_research_artifacts.py"
+}

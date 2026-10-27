@@ -1,0 +1,4 @@
+class,n,mean_words,median_words,mean_chars,min_words,max_words
+Valid,8000,20.76,20.0,127.37,5,48
+Suspicious,8000,29.78,28.0,169.04,8,66
+Spam,8000,14.9,15.0,91.26,1,35

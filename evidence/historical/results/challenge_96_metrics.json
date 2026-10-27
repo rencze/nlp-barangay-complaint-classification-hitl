@@ -1,0 +1,146 @@
+{
+  "SVM": {
+    "accuracy": 0.864583,
+    "macro_f1": 0.866667,
+    "confusion_matrix": [
+      [
+        30,
+        1,
+        1
+      ],
+      [
+        4,
+        27,
+        1
+      ],
+      [
+        6,
+        0,
+        26
+      ]
+    ],
+    "report": {
+      "Spam": {
+        "precision": 0.9285714285714286,
+        "recall": 0.8125,
+        "f1-score": 0.8666666666666667,
+        "support": 32.0
+      },
+      "Suspicious": {
+        "precision": 0.9642857142857143,
+        "recall": 0.84375,
+        "f1-score": 0.9,
+        "support": 32.0
+      },
+      "Valid": {
+        "precision": 0.75,
+        "recall": 0.9375,
+        "f1-score": 0.8333333333333334,
+        "support": 32.0
+      },
+      "accuracy": 0.8645833333333334,
+      "macro avg": {
+        "precision": 0.8809523809523809,
+        "recall": 0.8645833333333334,
+        "f1-score": 0.8666666666666667,
+        "support": 96.0
+      },
+      "weighted avg": {
+        "precision": 0.8809523809523809,
+        "recall": 0.8645833333333334,
+        "f1-score": 0.8666666666666667,
+        "support": 96.0
+      }
+    },
+    "by_language": {
+      "Bisaya": {
+        "n": 24,
+        "accuracy": 0.8333
+      },
+      "Filipino": {
+        "n": 24,
+        "accuracy": 0.7083
+      },
+      "English": {
+        "n": 24,
+        "accuracy": 0.9167
+      },
+      "Mixed": {
+        "n": 24,
+        "accuracy": 1.0
+      }
+    }
+  },
+  "NaiveBayes": {
+    "accuracy": 0.90625,
+    "macro_f1": 0.905659,
+    "confusion_matrix": [
+      [
+        29,
+        1,
+        2
+      ],
+      [
+        0,
+        31,
+        1
+      ],
+      [
+        2,
+        3,
+        27
+      ]
+    ],
+    "report": {
+      "Spam": {
+        "precision": 0.9,
+        "recall": 0.84375,
+        "f1-score": 0.8709677419354839,
+        "support": 32.0
+      },
+      "Suspicious": {
+        "precision": 0.8857142857142857,
+        "recall": 0.96875,
+        "f1-score": 0.9253731343283582,
+        "support": 32.0
+      },
+      "Valid": {
+        "precision": 0.9354838709677419,
+        "recall": 0.90625,
+        "f1-score": 0.9206349206349206,
+        "support": 32.0
+      },
+      "accuracy": 0.90625,
+      "macro avg": {
+        "precision": 0.9070660522273425,
+        "recall": 0.90625,
+        "f1-score": 0.9056585989662542,
+        "support": 96.0
+      },
+      "weighted avg": {
+        "precision": 0.9070660522273425,
+        "recall": 0.90625,
+        "f1-score": 0.9056585989662542,
+        "support": 96.0
+      }
+    },
+    "by_language": {
+      "Bisaya": {
+        "n": 24,
+        "accuracy": 0.9167
+      },
+      "Filipino": {
+        "n": 24,
+        "accuracy": 0.75
+      },
+      "English": {
+        "n": 24,
+        "accuracy": 0.9583
+      },
+      "Mixed": {
+        "n": 24,
+        "accuracy": 1.0
+      }
+    }
+  }
+}

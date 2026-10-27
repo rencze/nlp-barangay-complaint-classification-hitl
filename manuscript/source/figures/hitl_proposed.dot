@@ -1,0 +1,23 @@
+digraph G {
+ graph [rankdir=TB, bgcolor="white", pad="0.25", nodesep="0.36", ranksep="0.49", splines=ortho, compound=true, fontname="Liberation Serif", fontsize=16];
+ node [shape=box, style="solid", color="black", penwidth=1.25, fontname="Liberation Serif", fontsize=13, margin="0.18,0.10"];
+ edge [color="black", penwidth=1.15, arrowsize=.7, fontname="Liberation Serif", fontsize=11];
+
+ input [shape=parallelogram,label="Input: SVM Predicted Class and Class Probabilities"];
+ route [shape=diamond,label="Predicted Suspicious\nor Spam?"];
+ routine [shape=parallelogram,label="Predicted Valid\nTo Case Management"];
+ inspect [label="Administrator Reviews Submission\nOriginal narrative, prediction, supporting context"];
+ verify [label="Verify or Correct Label of Text Version\nValid / Suspicious / Spam"];
+ decide [shape=diamond,label="Administrative\nDisposition?"];
+ accept [label="Accept\nForward to Case Management"];
+ clarify [label="Request Clarification\nRecord pending review; assess response/deadline"];
+ reject [label="Reject or Close\nRecord reason under approved policy"];
+ sufficient [shape=diamond,label="Sufficient basis\nto proceed?"];
+ fallback [label="Further Review / Documented Closure\nNo automatic conversion to Spam"];
+ output [shape=parallelogram,label="Reviewed Text Label and Decision Record\nTo Feedback Quality Checking"];
+ input->route;route->routine[label="No (Valid)"];route->inspect[label="Yes"];inspect->verify->decide;
+ decide->accept[label="Accept"];decide->clarify[label="Clarify"];decide->reject[label="Reject"];
+ clarify->sufficient;sufficient->accept[label="Yes"];sufficient->fallback[label="No"];
+ verify->output[style=dashed];accept->output[style=dotted];reject->output[style=dotted];fallback->output[style=dotted];
+
+}
