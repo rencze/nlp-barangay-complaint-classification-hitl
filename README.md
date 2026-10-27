@@ -2,22 +2,20 @@
 
 Reproducible research on a fixed 24,000-record **synthetic, human-unreviewed** corpus comparing TF-IDF/Linear SVM with TF-IDF/Multinomial Naive Bayes. Offline scores do not validate a live application, authentic resident language, HITL adaptation or complaint-resolution effectiveness.
 
-## Final Milestone 2 audit
+## Submission package - 27 October 2026
 
-The public URL is accessible at the observed original commit `13dadbc3f82a11bce0383171624a78d4c3ccefc8`. Its older two-line README/demo source differs from this corrected local package. These corrections have not been pushed: noninteractive GitHub authentication was unavailable. See `docs/PUBLISH_CORRECTIONS.md` for exact ordinary-branch/commit/push commands. Do not treat local artifacts as already published.
+The public research branch is [`research/milestone2-final-audit`](https://github.com/rencze/nlp-barangay-complaint-classification-hitl/tree/research/milestone2-final-audit). The reproducibility package was published at `17ff46846af10f9554a14ec635390865afba50a3`; subsequent ordinary commits preserve that history. Use this research branch for the submission package; main still contains the earlier demo until a normal pull request is reviewed and merged.
 
-The final audit checks established data/models/predictions without repeating full research training. Supporting deliverables are `docs/DATASET_INTEGRITY_REPORT.md`, `docs/MILESTONE2_COMPLIANCE_MATRIX.md`, `docs/EXPERIMENTAL_VERIFICATION_REPORT.md`, `docs/FULL_STACK_ALIGNMENT.md` and `docs/FINAL_AUDIT_CHANGELOG.md`. The overall remote-artifact requirement remains Partial until authenticated publication and a fresh public-checkout check.
+- **Thesis PDF:** [`output/pdf/Thesis_Submission.pdf`](output/pdf/Thesis_Submission.pdf).
+- **Editable manuscript:** `manuscript/source/main.tex` and its referenced sources/figures. Compile twice with pdfLaTeX from `manuscript/source`.
+- **Local Overleaf upload:** `output/Thesis_Submission_Overleaf.zip`, containing only the files needed to compile the thesis.
+- **Research evidence:** canonical CSV in `data/`, pinned `requirements.txt`, scripts in `src/`, saved configurations/models/predictions in `results/verified_20261026/`, and research figures in `results/figures/`.
 
-## Deliverables
+The submission manuscript restores the detailed methodology and scientific tables from the preserved 86-page source, retains later scientific accuracy corrections, and removes the administrative compliance appendix. Earlier manuscript versions and original experimental evidence remain preserved. No dataset generation, full-study training or new experiment was performed for this submission correction.
 
-- `output/Thesis2_Verified_Overleaf.zip`: revised manuscript, compilable using `main.tex`.
-- `output/pdf/Thesis2_Verified_Manuscript.pdf`: compiled manuscript.
-- `output/pdf/ML_Evaluation_Report.pdf`: evaluation report with figures and academic tables.
-- `results/figures/`: final figures, 360-DPI PNG plus vector PDF/SVG.
-- `docs/FULL_STACK_ROADMAP.md`: Next.js/TypeScript, FastAPI, PostgreSQL plan and acceptance gates.
-- `docs/diagrams/`: editable Mermaid/SVG and rendered architecture/database diagrams.
-- `docs/RESEARCH_AUDIT.md`, `docs/CHANGELOG.md`: findings and verified/proposed/incomplete boundaries.
-- `evidence/historical/`: preserved supplied results; `results/verified_20261026/`: new metrics, predictions, configs and manifests.
+The completed evidence concerns synthetic-data classification. The target full-stack application, live HITL improvement and complaint-resolution benefits are not established; the approved system/HITL objectives require adviser-level scope resolution. `docs/CHANGELOG.md` records the correction and publication status.
+
+**Do not run `src/prepare_manuscript.py` or `src/finalize_milestone2.py` to rebuild this manuscript.** They are legacy revision generators that can overwrite the restored source. Compile the maintained LaTeX directly. Older ZIP/PDF files and reports describe earlier stages and are not the current submission files.
 
 ## Install
 
@@ -67,7 +65,6 @@ python -u src/research_validation.py --mode all
 python src/compare_models.py
 python src/make_system_diagrams.py
 python src/make_research_figures.py
-python src/prepare_manuscript.py
 ```
 
 First: original 18-config, three-fold scenario-grouped SVM grid, baseline, diagnostics and repeated synthetic-test evaluation. Second: separate five-fold training-only stability and validation diagnostics. Third: full-precision reference predictions/metrics and one separate word+character candidate, with and without training-group sigmoid calibration. Candidate evaluation uses development validation only; no candidate test metrics exist. Use `--mode audit` for checks or `--mode reference` to omit candidates. The test is **already inspected**, not a new independent test. The optional prior 48-message probe input is absent; no replacement challenge was fabricated.
@@ -91,12 +88,9 @@ With a complete TeX Live or MiKTeX installation:
 cd manuscript/source
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
 pdflatex -interaction=nonstopmode -halt-on-error main.tex
-cd ../../output/pdf
-pdflatex -interaction=nonstopmode -halt-on-error evaluation_report.tex
-pdflatex -interaction=nonstopmode -halt-on-error evaluation_report.tex
 ```
 
-The manuscript preserves supplied citations and black-and-white process diagrams; experimental plots retain meaningful color. `src/prepare_manuscript.py` regenerates edited sections from preserved source baselines and executed evidence. Legacy archive update/generator scripts are historical utilities, not required commands.
+The manuscript preserves supplied citations and black-and-white process diagrams; experimental plots retain meaningful color. The maintained LaTeX source is authoritative; legacy revision generators must not overwrite it. Legacy archive update/generator scripts are historical utilities, not required commands.
 
 ## Findings and boundaries
 
@@ -104,4 +98,4 @@ SVM validation/test Macro-F1 = 1.000000 / 1.000000; baseline = 0.992077 / 0.9916
 
 ## Existing application prototype
 
-Existing `src/app.py`, `src/static/`, `src/seed_db.py`, `src/run_experiments.py`, models and legacy outputs were preserved. The app uses SQLite and lacks target authentication/state/feedback safeguards. Softmax margins are not calibrated probabilities; auto-closing Spam conflicts with required review; its retrain route does not incorporate fetched feedback. It is not the planned Next.js/PostgreSQL system or deployment-ready HITL. No application deployment, GitHub push or release was performed.
+Existing `src/app.py`, `src/static/`, `src/seed_db.py`, `src/run_experiments.py`, models and legacy outputs were preserved. The app uses SQLite and lacks target authentication/state/feedback safeguards. Softmax margins are not calibrated probabilities; auto-closing Spam conflicts with required review; its retrain route does not incorporate fetched feedback. It is not the planned Next.js/PostgreSQL system or deployment-ready HITL. No application deployment or release is claimed; research artifacts are published on the branch identified above.

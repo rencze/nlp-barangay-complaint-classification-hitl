@@ -125,19 +125,5 @@ SPA-28 & Keyword-Stuffing Spam\\
 SPA-29 & Classification Manipulation Attempts\\
 SPA-30 & Deliberate Off-Topic Trolling\\
 \bottomrule\end{longtable}\normalsize
-\chapter{Audit Status and Reproducibility Artifacts}
+\chapter{Dataset Schema and Supporting Experimental Records}
 The released dataset contains \texttt{complaint\_text}, \texttt{classification}, language-group allocation, category IDs, source references, scenario and template family identifiers, generation seed and split assignment. These additional fields support audits but must be \emph{excluded} from the primary TF-IDF predictive features. The corpus is marked \texttt{synthetic\_researcher\_constructed\_unreviewed}; generated-language and human-label validation flags remain ``No''. The archived run outputs document all directly reported numbers in Chapter 4. Further human reviews, prospective HITL retraining or production benchmark data are not included because no completed results were provided for those procedures.
-
-\chapter{Milestone 2 Compliance and Evidence Traceability}\label{app:milestone2}
-The final audit links the manuscript to identifiable artifacts. The public repository is accessible at the observed original revision, but publication of the corrected local study package remains pending because authenticated write access was unavailable. Consequently, repository completeness is marked Partial rather than inferred from local files. Full install/minimal-example logs, dataset field checks, statistical verification and publication commands accompany the detailed supporting reports.
-\begin{table}[H]\centering\small\caption{Milestone 2 requirements and evidence status}\begin{tabularx}{\textwidth}{p{.21\textwidth}p{.18\textwidth}Xp{.12\textwidth}}\toprule Requirement & Section & Identifiable evidence & Status\\\midrule
-Hardware/software & \ref{sec:environment-final} & Supplied Milestone 2 environment; later device/package manifests & Pass\\
-Repository URL & \ref{sec:reproducibility-final} & Anonymous web/clone; public revision 13dadbc; corrected package not pushed & Partial\\
-README/install & \ref{sec:reproducibility-final} & Corrected local README, pinned dependencies and clean-install log; remote README incomplete & Partial\\
-Executable example & \ref{sec:reproducibility-final} & minimal\_example.py and observable narrative-to-label output in clean packaged checkout & Pass locally\\
-Baseline rationale & \ref{sec:baseline-final} & Reference config and saved NB pipeline; differing n-grams disclosed & Pass\\
-Metrics/equations & \ref{sec:metrics-final} & Actual predictions, full-precision metrics, counts and publication figures & Pass\\
-Tuning/CV & \ref{sec:tuning-final} & Original 18-config script/grid and separate five-fold fold logs & Pass\\
-Paired comparison & \ref{sec:mcnemar-final} & ID-aligned predictions, exact binomial p and corrected statistic & Pass\\\bottomrule\end{tabularx}\end{table}
-
-The canonical corpus and archived ALL\_SYNTHETIC\_V2 mirror share the stated SHA-256 and all 21 fields. No narrative, label, language, generation-category, family-ID or split change was found. No additional research dataset was used. Read-only final verification reloads artifacts and checks predictions/IDF without model fitting; earlier verification executions remain honestly recorded in supporting logs. The reference and candidate artifacts are research-only. Live resident authentication, HITL governance, accepted-case management and controlled feedback retraining remain proposed, with module-level acceptance gates in the roadmap.

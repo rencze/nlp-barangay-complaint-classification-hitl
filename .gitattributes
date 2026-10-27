@@ -3,3 +3,6 @@
 /manuscript/**/*.csv -text
 /evidence/**/*.csv -text
 /results/**/*.csv -text
+
+# The submission PDF must retain its exact binary bytes.
+/output/pdf/Thesis_Submission.pdf binary

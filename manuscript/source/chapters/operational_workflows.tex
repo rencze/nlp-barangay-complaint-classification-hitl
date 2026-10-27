@@ -81,10 +81,10 @@ Case management/accountability & Flowchart and local legal/interface precedents.
 \end{tabularx}\end{table}
 
 \subsection{Detailed Full-Stack Implementation Plan}
-The separately delivered roadmap defines the Next.js/TypeScript, FastAPI and PostgreSQL modules, REST schemas, versioned narrative/label/disposition/case tables, security controls, phased tests and acceptance gates. Figure~\ref{fig:op-system-integration} supplies the single software-integration overview; Figure~\ref{fig:verified-db} gives the complementary relational model. These are implementation plans, not validation of the existing SQLite/static-HTML prototype. Direct Valid routing records policy-based acceptance but never creates a human-verified label. Urgent human handling is independent of predicted class. The full database cardinalities and editable diagram sources accompany the roadmap.
+The proposed architecture separates Next.js/TypeScript resident and administrator interfaces, FastAPI inference and workflow endpoints, and PostgreSQL records for versioned narratives, predictions, verified labels, dispositions and accepted cases. Object-scoped authorization, append-only histories, explicit state transitions, and model-release approval are required application controls. Figure~\ref{fig:op-system-integration} supplies the single software-integration overview; Figure~\ref{fig:verified-db} gives the complementary relational model. These are implementation plans, not validation of the existing SQLite/static-HTML prototype. Direct Valid routing records policy-based acceptance but never creates a human-verified label. Urgent human handling is independent of predicted class. The editable diagram sources and detailed schema are maintained in the repository documentation.
 The relational design links immutable narrative versions to separate predictions and verified labels; accepted dispositions alone create cases. Append-only action and audit histories preserve the distinction between machine outputs and administrative decisions.
 
 \begin{figure}[H]\centering
 \includegraphics[width=.96\textwidth,height=.70\textheight,keepaspectratio]{figures/verified/database_overview.pdf}
-\caption{Proposed logical relational overview; full keys, constraints, indices and cardinalities are supplied with the roadmap.}\label{fig:verified-db}
+\caption{Proposed logical relational overview; keys, constraints, indices and cardinalities are specified in the repository schema design.}\label{fig:verified-db}
 \end{figure}
